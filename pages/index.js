@@ -2,6 +2,7 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
+	console.log('version - 1.0.0');
 	return (
 		<div className={styles.bgimg}>
 			<Head>
