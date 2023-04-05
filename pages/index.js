@@ -1,4 +1,9 @@
 import Head from 'next/head';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
+
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
@@ -21,7 +26,42 @@ export default function Home() {
 			>
 				<h1>A technology enabled carbon offsetting plaform is COMING SOON</h1>
 				<hr />
-				<p id='demo' style={{ 'font-size': '30px' }}></p>
+				<div>
+					<FacebookIcon
+						className={styles.icons}
+						fontSize='large'
+						onClick={() => {
+							window
+								.open('https://www.facebook.com/treepp.org', '_blank')
+								.focus();
+						}}
+					/>
+					<LinkedInIcon
+						className={styles.icons}
+						fontSize='large'
+						onClick={() => {
+							window
+								.open('https://linkedin.com/company/tree-pp', '_blank')
+								.focus();
+						}}
+					/>
+					<GitHubIcon
+						className={styles.icons}
+						fontSize='large'
+						onClick={() => {
+							window.open('https://github.com/tree-pp', '_blank').focus();
+						}}
+					/>
+					<VolunteerActivismIcon
+						className={styles.icons}
+						fontSize='large'
+						onClick={() => {
+							window
+								.open('https://opencollective.com/tree-pp', '_blank')
+								.focus();
+						}}
+					/>
+				</div>
 			</div>
 			<div className={styles.bottomleft}>
 				<p>hi@treepp.org</p>
