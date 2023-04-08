@@ -21,14 +21,11 @@ const theme = createTheme();
 const sections = [
 	{ title: 'What is Tree++', url: '#' },
 	{ title: 'How it Works', url: '#' },
-	{ title: 'Culture', url: '#' },
-	{ title: 'Business', url: '#' },
-	{ title: 'Politics', url: '#' },
-	{ title: 'Opinion', url: '#' },
-	{ title: 'Science', url: '#' },
-	{ title: 'Health', url: '#' },
-	{ title: 'Style', url: '#' },
-	{ title: 'Travel', url: '#' }
+	{ title: 'Recent Activities', url: '#' },
+	{ title: 'Contribute', url: '#' },
+	{ title: 'Team', url: '#' },
+	{ title: 'Donors', url: '#' },
+	{ title: 'Partners', url: '#' }
 ];
 
 export default function Home() {
@@ -44,7 +41,7 @@ export default function Home() {
 
 			<ThemeProvider theme={theme}>
 				<CssBaseline />
-				<Header title='Tree++' sections={sections} />
+				<Header title='Tree++' pages={sections} />
 				<Container maxWidth='lg'>
 					<main>
 						<TopFeaturedSection />
