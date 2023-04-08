@@ -14,10 +14,9 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import Image from 'next/image';
 
-const pages = ['Products', 'Pricing', 'Blog', 'International'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-
-export default function Header() {
+export default function Header(props) {
+	console.log(props);
+	const { pages } = props;
 	const [anchorElNav, setAnchorElNav] = React.useState(null);
 
 	const handleOpenNavMenu = () => {
@@ -81,8 +80,8 @@ export default function Header() {
 							}}
 						>
 							{pages.map(page => (
-								<MenuItem key={page} onClick={handleCloseNavMenu}>
-									<Typography textAlign='center'>{page}</Typography>
+								<MenuItem key={page.title} onClick={handleCloseNavMenu}>
+									<Typography textAlign='center'>{page.title}</Typography>
 								</MenuItem>
 							))}
 						</Menu>
@@ -109,11 +108,11 @@ export default function Header() {
 					<Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 						{pages.map(page => (
 							<Button
-								key={page}
+								key={page.title}
 								onClick={handleCloseNavMenu}
 								sx={{ my: 2, color: 'white', display: 'block' }}
 							>
-								{page}
+								{page.title}
 							</Button>
 						))}
 					</Box>
