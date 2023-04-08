@@ -1,16 +1,9 @@
-import { Container } from '@mui/material';
 import Image from 'next/image';
 import * as React from 'react';
+import styles from '../styles/TopFeaturedSection.module.css';
 
 export default function TopFeaturedSection() {
 	return (
-		<Container>
-			<Image
-				src={'/banner.PNG'}
-				width='500'
-				height='200'
-				// fill
-			/>
-		</Container>
+		<Image className={styles.image} src={'/banner.png'} fill unoptimized />
 	);
 }
