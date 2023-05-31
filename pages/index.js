@@ -7,7 +7,7 @@ import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
-	console.log('version - 1.0.0');
+	console.log('version - 1.0.1');
 	return (
 		<div className={styles.bgimg}>
 			<Head>
