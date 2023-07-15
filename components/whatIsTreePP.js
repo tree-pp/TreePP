@@ -9,12 +9,21 @@ export default function WhatIsTreePP() {
 				What is Tree++
 			</Typography>
 			<p>
-				Next steps In this quickstart, you deployed a Kubernetes cluster and
-				then deployed a sample multi-container application to it. To learn more
-				about AKS by walking through a complete example, including building an
-				application, deploying from Azure Container Registry, updating a running
-				application, and scaling and upgrading your cluster, continue to the
-				Kubernetes cluster tutorial.
+				Tree++ is a digital platform that connects the dots in tree plantation
+				to address climate change through the implementation of carbon
+				offsetting initiatives. The platform makes it easier for everyone to
+				plant trees by rightly identifying the stakeholders and activities while
+				planting trees and connecting them all together in a cohesive manner.
+				Furthermore, the platform has built-in monitoring mechanisms to ensure
+				that the planted trees are tracked and cared for until maturity,
+				ensuring that the carbon offsetting efforts are sustainable and
+				effective
+			</p>
+			<p>
+				The platform independent of fresh fund/donation, it becomes
+				self-sustainable once sufficient stakeholders join the platform to its
+				journey towards reducing the carbon footprint and achieving net zero and
+				beyond!
 			</p>
 		</Container>
 	);
