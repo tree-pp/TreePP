@@ -29,7 +29,7 @@ const sections = [
 ];
 
 export default function Home() {
-	console.log('version - 1.0.1');
+	console.log('version - 1.0.2');
 	return (
 		<div className={styles.bgimg} style={{ backgroundColor: '#f8f1e6' }}>
 			<Head>
