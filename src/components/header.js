@@ -13,7 +13,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 
 export default function Header(props) {
-	console.log(props);
+	console.log('version - 1.0.2');
 	const { pages } = props;
 	const [anchorElNav, setAnchorElNav] = React.useState(null);
 
