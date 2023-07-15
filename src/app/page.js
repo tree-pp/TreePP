@@ -39,24 +39,24 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<ThemeProvider theme={theme}>
-				<CssBaseline />
-				<Header title='Tree++' pages={sections} />
-				<Container maxWidth='lg'>
-					<main>
-						<TopFeaturedSection />
-						<WhatIsTreePP />
-						<HowItWorks />
-						<RecentWorks />
-						<GetInvolved />
-						<Team />
-					</main>
-				</Container>
-				<Footer
-					title='Footer'
-					description='Something here to give the footer a purpose!'
-				/>
-			</ThemeProvider>
+			{/* <ThemeProvider theme={theme}> */}
+			<CssBaseline />
+			<Header title='Tree++' pages={sections} />
+			<Container maxWidth='lg'>
+				<main>
+					<TopFeaturedSection />
+					<WhatIsTreePP />
+					<HowItWorks />
+					<RecentWorks />
+					<GetInvolved />
+					<Team />
+				</main>
+			</Container>
+			<Footer
+				title='Footer'
+				description='Something here to give the footer a purpose!'
+			/>
+			{/* </ThemeProvider> */}
 		</div>
 	);
 }
