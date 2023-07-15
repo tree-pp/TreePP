@@ -17,7 +17,7 @@ import RecentWorks from '../components/recentWorks';
 import GetInvolved from '../components/getInvolved';
 import Team from '../components/team';
 
-const theme = createTheme();
+// const theme = createTheme();
 const sections = [
 	{ title: 'What is Tree++', url: '#' },
 	{ title: 'How it Works', url: '#' },
@@ -39,24 +39,24 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<ThemeProvider theme={theme}>
-				<CssBaseline />
-				<Header title='Tree++' pages={sections} />
-				<Container maxWidth='lg'>
-					<main>
-						<TopFeaturedSection />
-						<WhatIsTreePP />
-						<HowItWorks />
-						<RecentWorks />
-						<GetInvolved />
-						<Team />
-					</main>
-				</Container>
-				<Footer
-					title='Footer'
-					description='Something here to give the footer a purpose!'
-				/>
-			</ThemeProvider>
+			{/* <ThemeProvider theme={theme}> */}
+			<CssBaseline />
+			<Header title='Tree++' pages={sections} />
+			<Container maxWidth='lg'>
+				<main>
+					<TopFeaturedSection />
+					<WhatIsTreePP />
+					<HowItWorks />
+					<RecentWorks />
+					<GetInvolved />
+					<Team />
+				</main>
+			</Container>
+			<Footer
+				title='Footer'
+				description='Something here to give the footer a purpose!'
+			/>
+			{/* </ThemeProvider> */}
 		</div>
 	);
 }
