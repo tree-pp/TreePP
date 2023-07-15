@@ -31,7 +31,6 @@ export default function Header(props) {
 		<AppBar position='static' style={{ background: '#005500' }}>
 			<Container maxWidth='xl'>
 				<Toolbar disableGutters>
-					{/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
 					<Typography
 						variant='h6'
 						noWrap
@@ -47,7 +46,7 @@ export default function Header(props) {
 							textDecoration: 'none'
 						}}
 					>
-						Tree++
+						{props.title}
 					</Typography>
 
 					<Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
