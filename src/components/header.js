@@ -1,3 +1,5 @@
+'use client';
+
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -7,12 +9,8 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-import Image from 'next/image';
 
 export default function Header(props) {
 	console.log(props);
@@ -31,7 +29,6 @@ export default function Header(props) {
 		<AppBar position='static' style={{ background: '#005500' }}>
 			<Container maxWidth='xl'>
 				<Toolbar disableGutters>
-					{/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
 					<Typography
 						variant='h6'
 						noWrap
@@ -47,7 +44,7 @@ export default function Header(props) {
 							textDecoration: 'none'
 						}}
 					>
-						Tree++
+						{props.title}
 					</Typography>
 
 					<Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
