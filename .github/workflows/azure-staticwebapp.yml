@@ -12,8 +12,6 @@
 #    For instructions on setting up the appropriate configuration values go to https://docs.microsoft.com/azure/static-web-apps/front-end-frameworks
 name: Deploy web app to Azure Static Web Apps
 
-skip_deploy_on_missing_secrets: true
-
 on:
   push:
     branches: [ "main", "staging" ]
@@ -27,6 +25,8 @@ env:
   API_LOCATION: "api" # location of your api source code - optional
   APP_ARTIFACT_LOCATION: "out" # location of client code build output
   AZURE_STATIC_WEB_APPS_API_TOKEN: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_GRAY_BAY_0ABFBD600 }} # secret containing deployment token for your static web app
+  skip_deploy_on_missing_secrets: true
+
 
 permissions:
   contents: read
