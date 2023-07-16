@@ -12,6 +12,8 @@
 #    For instructions on setting up the appropriate configuration values go to https://docs.microsoft.com/azure/static-web-apps/front-end-frameworks
 name: Deploy web app to Azure Static Web Apps
 
+skip_deploy_on_missing_secrets: true
+
 on:
   push:
     branches: [ "main", "staging" ]
