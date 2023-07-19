@@ -1,4 +1,4 @@
-import Navbar from "../Components/Navbar";
+import Navbar from "../components/Navbar";
 
 // import Font Awesome CSS
 
