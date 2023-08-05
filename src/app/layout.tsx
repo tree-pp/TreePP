@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Navbar from '../Components/Navbar'
+import Bottomfooter from '@/Components/Bottomfooter'
 
 
 
@@ -35,6 +36,7 @@ export default function RootLayout({
         <main className="flex flex-col">
         <Navbar/>
         {children}
+        <Bottomfooter />
         </main>
         </body>
     </html>
