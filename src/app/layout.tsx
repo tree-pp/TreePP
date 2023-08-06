@@ -1,7 +1,9 @@
-import "./globals.css";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import Navbar from "../components/Navbar";
+import './globals.css'
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import Navbar from '../components/Navbar'
+import Bottomfooter from '@/components/Bottomfooter'
+
 
 // import Font Awesome CSS
 
@@ -28,8 +30,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <main className="flex flex-col">
-          <Navbar />
-          {children}
+           <Navbar />
+           {children}
+           <Bottomfooter />
         </main>
       </body>
     </html>
