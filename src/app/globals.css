@@ -18,10 +18,19 @@
 
 body {
   color: rgb(var(--foreground-rgb));
+<<<<<<< HEAD
   background: linear-gradient(
+=======
+  background: whitesmoke
+  /* linear-gradient(
+>>>>>>> aabdf04c322d458a61ec8c0650952733d9d88340
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
+<<<<<<< HEAD
     rgb(var(--background-start-rgb));
+=======
+    rgb(var(--background-start-rgb)); */
+>>>>>>> aabdf04c322d458a61ec8c0650952733d9d88340
 }
