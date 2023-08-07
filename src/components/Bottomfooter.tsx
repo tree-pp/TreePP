@@ -11,15 +11,15 @@ import {
 export default function Bottomfooter() {
   return (
     <div className="bg-slate-900">
-      <div className="pr-24 pl-24 pt-20 flex flex-col md:flex-row gap-y-8 md:gap-y-0 justify-evenly gap-x-10 items-stretch">
+      <div className="pr-24 pl-24 pt-10 flex flex-col md:flex-row gap-y-8 md:gap-y-0 justify-evenly gap-x-10 items-stretch">
         <div className="uppercase tracking-widest text-white font-medium text-center border-b-2 transition duration-300 border-transparent hover:border-green-400">
-          <h1 className="text-md">
+          <h1 className="text-lg font-semibold">
             Tree++
             <br />
           </h1>
           <Link
             href="https://goo.gl/maps/aofQWDw2cKsLtNg77"
-            className="text-xs"
+            className="text-xs font-light"
           >
             Somewhere,
             <br />
@@ -30,29 +30,29 @@ export default function Bottomfooter() {
         </div>
 
         <div className="uppercase tracking-widest text-white font-medium text-center">
-          <h1 className="text-md">
+          <h1 className="text-lg font-semibold">
             About us
             <br />
           </h1>
           <Link
             href="#"
-            className="text-xs border-b-2 transition duration-300 border-transparent hover:border-green-400"
+            className="font-light text-xs border-b-2 transition duration-300 border-transparent hover:border-green-400"
           >
             Story
             <br />
           </Link>
           <Link
             href="#"
-            className="text-xs border-b-2 transition duration-300 border-transparent hover:border-green-400"
+            className="font-light text-xs border-b-2 transition duration-300 border-transparent hover:border-green-400"
           >
             News{" "}
           </Link>
         </div>
 
-        <div className="uppercase tracking-widest text-white font-medium text-center">
+        <div className="text-lg font-semibold uppercase tracking-widest text-white text-center">
           Find us on:
           <br />
-          <div className="text-xs inline-flex">
+          <div className="font-light text-xs inline-flex">
             Facebook:{" "}
             <Link href="https://www.facebook.com/treepp.org">
               <FaFacebookF
@@ -62,7 +62,7 @@ export default function Bottomfooter() {
             </Link>
           </div>
           <br />
-          <div className="text-xs inline-flex">
+          <div className="font-light text-xs inline-flex">
             LinkedIn:{" "}
             <Link href="https://www.linkedin.com/company/tree-pp/">
               <FaLinkedinIn
@@ -72,7 +72,7 @@ export default function Bottomfooter() {
             </Link>
           </div>
           <br />
-          <div className="text-xs inline-flex">
+          <div className="font-light text-xs inline-flex">
             Github:{" "}
             <Link href="https://github.com/tree-pp">
               <FaGithubSquare
@@ -83,28 +83,28 @@ export default function Bottomfooter() {
           </div>
         </div>
 
-        <div className="uppercase tracking-widest text-white font-medium text-center">
+        <div className="text-lg font-semibold uppercase tracking-widest text-white text-center">
           <h1 className="text-md">
             Learn more
             <br />
           </h1>
           <Link
             href="#"
-            className="text-xs border-b-2 transition duration-300 border-transparent hover:border-green-400"
+            className="font-light text-xs border-b-2 transition duration-300 border-transparent hover:border-green-400"
           >
             Contact us
             <br />
           </Link>
           <Link
             href="#"
-            className="text-xs border-b-2 transition duration-300 border-transparent hover:border-green-400"
+            className="font-light text-xs border-b-2 transition duration-300 border-transparent hover:border-green-400"
           >
             Legals
             <br />
           </Link>
           <Link
             href="#"
-            className="text-xs border-b-2 transition duration-300 border-transparent hover:border-green-400"
+            className="font-light text-xs border-b-2 transition duration-300 border-transparent hover:border-green-400"
           >
             Data policy
           </Link>
@@ -122,10 +122,10 @@ export default function Bottomfooter() {
           />
         </div>
         <div className="flex-grow flex items-center justify-center">
-          <div className="text-md text-white font-medium flex items-center mt-5">
+          <div className="text-md text-white font-light flex items-center mt-5">
             <FaRegCopyright className="mr-2" size="1.25rem" />
             <span className="pr-20">
-              2023 Tree++&nbsp;&nbsp;&bull;&nbsp;&nbsp;All rights reserved.
+              2023 Tree++&nbsp;&nbsp;|&nbsp;&nbsp;All rights reserved.
             </span>
           </div>
         </div>
