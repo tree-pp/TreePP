@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.css';
 import WhoWeAre from '@/components/WhoWeAre';
 import WhatWeDo from '@/components/WhatWeDo';
 import HowItWorks from '../components/HowItWorks';
+import Activities from '../components/Activities';
 
 // const theme = createTheme();
 // const sections = [
@@ -37,6 +38,7 @@ export default function Home() {
 					<WhoWeAre />
 					<WhatWeDo />
 					<HowItWorks />
+					<Activities />
 				</main>
 			</div>
 
