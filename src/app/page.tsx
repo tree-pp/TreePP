@@ -28,7 +28,7 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			{/* <ThemeProvider theme={theme}> */}
+			{/* <TheaameProvider theme={theme}> */}
 
 			{/* <Header title="Tree++" pages={sections} /> */}
 			<div>
