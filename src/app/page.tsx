@@ -20,7 +20,7 @@ import Activities from '../components/Activities';
 
 export default function Home() {
 	return (
-		<div className={styles.bgimg} style={{ backgroundColor: '#f8f1e6' }}>
+		<div className={styles.bgimg} style={{ backgroundColor: 'white' }}>
 			<Head>
 				<title>
 					Tree++ | Digital Carbon Offsetting through Tree Plantation
