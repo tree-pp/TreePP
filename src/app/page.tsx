@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Head from 'next/head';
+import { Metadata } from 'next'
 
 import styles from '../styles/Home.module.css';
 import WhoWeAre from '@/components/WhoWeAre';
@@ -17,15 +17,19 @@ import HowItWorks from '../components/HowItWorks';
 //   { title: "Partners", url: "#" },
 // ];
 
+export const metadata: Metadata = {
+    title: 'My Page Title',
+  }
+
 export default function Home() {
 	return (
 		<div className={styles.bgimg} style={{ backgroundColor: '#f8f1e6' }}>
-			<Head>
+			{/* <Head>
 				<title>
 					Tree++ | Digital Carbon Offsetting through Tree Plantation
 				</title>
 				<link rel='icon' href='/favicon.ico' />
-			</Head>
+			</Head> */}
 
 			{/* <ThemeProvider theme={theme}> */}
 
