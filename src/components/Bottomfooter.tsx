@@ -38,10 +38,12 @@ export default function Bottomfooter() {
           <Link href="#" className="text-xs border-b-2 transition duration-300 border-transparent hover:border-green-400">Data policy</Link>
         </div>
       </div>
-      <div className="flex flex-row space-x-11 inline-flex w-full justify-start">
-        <Image src="/footer_1.png" alt="" className="h-40 w-auto pr-80" width="1" height="1" unoptimized />
-        <div className="text-md text-white font-medium inline-flex pt-20 pl-50"><FaRegCopyright className="" size='1.25rem' />2023 Tree++. All rights reserved.</div>
+      <div className="flex items-center justify-start">
+        <Image src="/footer_1.png" alt="" className="h-40 w-auto" width="1" height="1" unoptimized />
+        <div className="text-center flex-grow">
+          <div className="text-md text-white font-medium inline-flex"><FaRegCopyright className="" size='1.25rem' />2023 Tree++. All rights reserved.</div>  </div>
+          {/* text-md text-white font-medium inline-flex pt-20 pl-50 justify-cen */}
+        </div>
       </div>
-    </div>
   );
 }
