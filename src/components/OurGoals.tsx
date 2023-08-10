@@ -30,7 +30,7 @@ const OurGoals = () => {
   ];
 
   return (
-    <div className="our-goals flex flex-col py-4 px-12  bg-white">
+    <div className="our-goals flex flex-col py-4 px-12  bg-slate-50">
       <div className="  flex flex-col justify-center items-center">
         <h1 className="text-black text-3xl font-bold text-center">Our Goals</h1>
         <div className="h-1 bg-green-500 w-20 rounded-full"></div>
