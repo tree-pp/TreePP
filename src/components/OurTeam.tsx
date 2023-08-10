@@ -37,7 +37,7 @@ const OurTeam = () => {
     // Can add more person as needed
   ];
   return (
-    <div className="our-goals flex flex-col py-4 px-4 md:px-12 bg-slate-50">
+    <div className="our-goals flex flex-col py-4 px-4 md:px-12 bg-white">
       <div className="flex flex-col justify-center items-center mb-6">
         <h1 className="text-black text-3xl font-bold text-center">
           Our Team
