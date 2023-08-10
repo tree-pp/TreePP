@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 // import Font Awesome CSS
 
@@ -15,7 +16,12 @@ export default function Navbar() {
     // ];
     return (
 <div className="pr-14 pl-12 py-2 bg-slate-900 flex flex-col md:flex-row gap-y-8 md:gap-y-0 justify-between items-center font-bold">
-      <img src="/homepage_logo.svg" className="h-12 w-30" />
+      
+          <Image
+            alt="TreePP Logo"
+            width={135}
+            height={54}
+            src="/homepage_logo.svg" />
 
       <div className="flex flex-col md:flex-row gap-x-10 items-center">
         <Link
