@@ -36,43 +36,41 @@ const OurTeam = () => {
       
     // Can add more person as needed
   ];
-
   return (
-    <div className="our-goals flex flex-col py-4 px-12  bg-slate-50">
-      <div className="  flex flex-col justify-center items-center">
-      <h1 className="text-black text-3xl font-bold text-center">Our Team</h1>
+    <div className="our-goals flex flex-col py-4 px-4 md:px-12 bg-slate-50">
+      <div className="flex flex-col justify-center items-center mb-6">
+        <h1 className="text-black text-3xl font-bold text-center">
+          Our Team
+        </h1>
         <div className="h-1 bg-green-500 w-24 rounded-full"></div>
-       </div> 
-      <div>
-        <div className="flex flex-row pt-10 pb-6 items-center">
-          {TeamInfo.slice(0).map((person, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center w-1/6 pt-3"
-            >
-              <Image
-                width={150}
-                height={150}
-                src={person.imageSrc}
-                alt={`Person ${index + 1}`}
-                style={imageStyle}   
-              />
-              <p className=" text-black font-sans pt-3 leading-tight">
-                {person.text}
-              </p>
-            </div>
-          ))}
-        </div>
       </div>
-     
-        <Link
-        href="/Team"
-        className="flex flex-row mb-2 justify-center">
-            <span className="text-md text-black duration-300 border-b-2 border-green-500 hover:text-green-500 hover:border-green-600">
-                See more
-            </span>
-         
-       </Link> 
+      <div className="flex flex-col md:flex-row md:flex-wrap mt-2 items-center">
+        {TeamInfo.slice(0).map((person, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center w-full md:w-1/6 p-3"
+          >
+            <Image
+              width={150}
+              height={150}
+              src={person.imageSrc}
+              alt={`Person ${index + 1}`}
+              style={imageStyle}
+              className="mb-2"
+            />
+            <p className="text-black font-sans text-center leading-tight">
+              {person.text}
+            </p>
+          </div>
+        ))}
+      </div>
+      <div className="flex justify-center mt-4">
+        <Link href="/Team">
+          <span className="text-md text-black duration-300 border-b-2 border-green-500 hover:text-green-500 hover:border-green-600">
+            See more
+          </span>
+        </Link>
+      </div>
     </div>
   );
 };
