@@ -7,6 +7,7 @@ import WhatWeDo from '@/components/WhatWeDo';
 import HowItWorks from '../components/HowItWorks';
 import Activities from '../components/Activities';
 import OurTeam from '@/components/OurTeam';
+import OurGoals from '@/components/OurGoals';
 
 // const theme = createTheme();
 // const sections = [
@@ -40,6 +41,7 @@ export default function Home() {
 					<WhatWeDo />
 					<HowItWorks />
 					<Activities />
+					<OurGoals/>
 					<OurTeam />
 				</main>
 			</div>
