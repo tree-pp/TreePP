@@ -41,7 +41,7 @@ export default function Home() {
 					<WhatWeDo />
 					<HowItWorks />
 					<Activities />
-					<OurGoals/>
+					<OurGoals />
 					<OurTeam />
 				</main>
 			</div>
