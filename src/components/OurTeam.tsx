@@ -1,6 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const imageStyle = {
+  borderRadius: '50%',
+  border: '1px solid #fff',
+}
+
 const OurTeam = () => {
   const TeamInfo = [
     {
@@ -39,16 +44,18 @@ const OurTeam = () => {
         <div className="h-1 bg-green-500 w-24 rounded-full"></div>
        </div> 
       <div>
-        <div className="flex flex-row py-4 items-center">
+        <div className="flex flex-row pt-10 pb-6 items-center">
           {TeamInfo.slice(0).map((person, index) => (
             <div
               key={index}
               className="flex flex-col items-center w-1/6 pt-3"
             >
-              <img
+              <Image
+                width={150}
+                height={150}
                 src={person.imageSrc}
                 alt={`Person ${index + 1}`}
-                className="h-36 w-36 object-cover object-center rounded-full"
+                style={imageStyle}   
               />
               <p className=" text-black font-sans pt-3 leading-tight">
                 {person.text}
