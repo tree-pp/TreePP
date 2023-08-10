@@ -48,7 +48,7 @@ const OurTeam = () => {
         {TeamInfo.slice(0).map((person, index) => (
           <div
             key={index}
-            className="flex flex-col items-center w-full md:w-1/6 p-3"
+            className="flex flex-col items-center w-full md:w-1/3 p-3"
           >
             <Image
               width={150}
