@@ -122,7 +122,7 @@ export default function Bottomfooter() {
           />
         </div>
         <div className="flex-grow flex items-center justify-center">
-          <div className="text-md text-white font-light flex items-center mt-10">
+          <div className="text-md text-white font-light flex items-center mt-20">
             <FaRegCopyright className="mr-2" size="1.25rem" />
             <span className="pr-20">
               2023 Tree++&nbsp;&nbsp;|&nbsp;&nbsp;All rights reserved.

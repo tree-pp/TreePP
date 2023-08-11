@@ -21,19 +21,12 @@ import OurGoals from '@/components/OurGoals';
 // ];
 
 export const metadata: Metadata = {
-    title: 'My Page Title',
+    title: 'Tree++ | Digital Carbon Offsetting through Tree Plantation',
   }
 
 export default function Home() {
 	return (
 		<div className={styles.bgimg} style={{ backgroundColor: 'white' }}>
-			<Head>
-				<title>
-					Tree++ | Digital Carbon Offsetting through Tree Plantation
-				</title>
-				<link rel='icon' href='/favicon.ico' />
-			</Head> */
-
 			{/* <TheaameProvider theme={theme}> */}
 
 			{/* <Header title="Tree++" pages={sections} /> */}
