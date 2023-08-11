@@ -32,7 +32,7 @@ export default function Home() {
 					Tree++ | Digital Carbon Offsetting through Tree Plantation
 				</title>
 				<link rel='icon' href='/favicon.ico' />
-			</Head> */}
+			</Head> */
 
 			{/* <TheaameProvider theme={theme}> */}
 
