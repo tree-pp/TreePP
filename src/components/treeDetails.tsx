@@ -20,7 +20,7 @@ interface treeProps {
 export default (tree) => {
     return (
         console.log(tree),
-        console.log(tree.donorLand),
+        console.log(tree.image),
         //<div className='flex flex-col justify-center items-center'>
             <div className='flex flex-row justify-center py-12'>
                 <div className='flex flex-col relative rounded-lg overflow-hidden w-1/4'>

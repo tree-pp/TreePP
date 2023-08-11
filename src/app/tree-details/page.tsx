@@ -16,18 +16,18 @@ import Image from "next/image";
 
 export default function tree_details() {
     return (
-<div className='flex flex-col justify-center items-center'>
-             <SearchBar />
-        <TreeDetails 
-        id='000182'
-        name='Swietenia Mahogoni'
-        datePlanted='000182'
-        donor='Mr. X'
-        landOwner='Mr. Y'
-        location='Gilatala, Khulna'
-        landType='Household Yard'
-        image='./tree.jpeg'
-        />
-    </div>
+        <div className='flex flex-col justify-center items-center'>
+            <SearchBar />
+            <TreeDetails
+                id='000182'
+                name='Swietenia Mahogoni'
+                datePlanted='000182'
+                donor='Mr. X'
+                landOwner='Mr. Y'
+                location='Gilatala, Khulna'
+                landType='Household Yard'
+                image='./tree.jpeg'
+            />
+        </div>
     )
-    }
+}

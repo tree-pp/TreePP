@@ -1,11 +1,16 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { useRouter } from 'next/navigation'
 
 const SearchBar = () => {
   const [searchText, setSearchText] = useState('');
+  const router = useRouter();
 
   const handleSearch = () => {
     // Perform search operation using the searchText
     console.log('Search Text:', searchText);
+
+    // Construct the URL with the searched text and navigate to it
+    router.push(`/t/${encodeURIComponent(searchText)}`);
   };
 
   const handleChange = (event) => {
