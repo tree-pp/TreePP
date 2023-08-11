@@ -22,11 +22,11 @@ export default function tree_details() {
                 <p className='font-bold pt-8'>Recent</p>
                 <div >
                     <div className="flex flex-col md:flex-row gap-x-10 items-center my-10 pl-2.5 pb-5">
-                        <ActivityImageCard src="/tree.jpeg" id="000182" caption="Banayan" />
-                        <ActivityImageCard src="/tree.jpeg" id="000183" caption="Shegun" />
-                        <ActivityImageCard src="/tree.jpeg" id="000184" caption="Papaya" />
-                        <ActivityImageCard src="/tree1.jpeg" id="000185" caption="Mango" />
-                        <ActivityImageCard src="/tree1.jpeg" id="000186" caption="Apple" />
+                        <ActivityImageCard src="/tree.jpeg" caption="Banayan" />
+                        <ActivityImageCard src="/tree.jpeg" caption="Shegun" />
+                        <ActivityImageCard src="/tree.jpeg" caption="Papaya" />
+                        <ActivityImageCard src="/tree1.jpeg" caption="Mango" />
+                        <ActivityImageCard src="/tree1.jpeg" caption="Apple" />
                     </div>
                 </div>
 

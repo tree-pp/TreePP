@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import SearchBar from '../../../components/SearchBar';
-import TreeDetails from '../../../components/treeDetails';
+import TreeDetails from '../../../components/TreeDetails';
 
 export default function Page({ params }: { params: { treeId: string } }) {
   return (

@@ -1,6 +1,6 @@
 "use client";
 import SearchBar from '../../components/SearchBar';
-import TreeDetails from '../../components/treeDetails';
+import TreeDetails from '../../components/TreeDetails';
 import Image from "next/image";
 
 // const treeProps={
