@@ -10,6 +10,7 @@ export default function Page({ params }: { params: { treeId: string } }) {
       <TreeDetails
         id={params.treeId}
         name='Swietenia Mahogoni'
+        commonName='Mahogoni'
         datePlanted='000182'
         donor='Mr. X'
         landOwner='Mr. Y'

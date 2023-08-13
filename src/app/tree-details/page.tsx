@@ -21,6 +21,7 @@ export default function tree_details() {
             <TreeDetails
                 id='000182'
                 name='Swietenia Mahogoni'
+                commonName='Mahogoni'
                 datePlanted='000182'
                 donor='Mr. X'
                 landOwner='Mr. Y'
