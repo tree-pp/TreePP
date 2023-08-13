@@ -23,14 +23,14 @@ export default function Navbar() {
       <nav>
         <section className="MOBILE-MENU flex lg:hidden">
 
-        <Hamburger rounded color="#FFF" easing="ease-in" onToggle={toggled => {
+        <Hamburger rounded color="#FFF" duration={0.15} easing="ease-in" onToggle={toggled => {
            if (toggled) {
             setIsNavOpen((prev) => !prev) // open a menu
           } else {
             setIsNavOpen(false)// close a menu
                }
           }} />
-          <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}> 
+          <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"} > 
             <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px]">
               <li className="uppercase tracking-widest text-black text-xs border-b-2 transition duration-500 border-transparent hover:text-green-400 hover:border-green-500"
        >
@@ -86,7 +86,7 @@ export default function Navbar() {
         display: block;
         position: absolute;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         top: 64px;
         left: 0;
         background: white;
@@ -95,6 +95,8 @@ export default function Navbar() {
         flex-direction: column;
         padding-top: 200px;
         align-items: center;
+        transition-property: opacity, left, top, height;
+        transition-duration: 3s, 5s, 3s, 5s;
       }
     `}</style>
     </div>
