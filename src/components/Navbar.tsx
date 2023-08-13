@@ -13,13 +13,12 @@ export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
 
   return (
-    <div className="pr-14 pl-12 py-2 bg-slate-900 gap-y-8 md:gap-y-0 flex items-center justify-between font-bold">
+    <div className="pr-4 lg:pr-14 pl-6 lg:pl-12 py-2 bg-slate-900 gap-y-8 lg:gap-y-0 flex items-center justify-between font-bold">
     <Image
         alt="TreePP Logo"
         width={135}
         height={54}
         src="/homepage_logo.svg" />
-
       <nav>
         <section className="MOBILE-MENU flex lg:hidden">
 
@@ -32,18 +31,18 @@ export default function Navbar() {
           }} />
           <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"} > 
             <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px]">
-              <li className="uppercase tracking-widest text-black text-xs border-b-2 transition duration-500 border-transparent hover:text-green-400 hover:border-green-500"
+              <li className="uppercase tracking-widest font-normal text-black text-xl border-b-2 transition duration-500 border-transparent hover:text-green-400 hover:border-green-500"
        >
                 <a href="/mission">Mission</a>
               </li>
-              <li className="uppercase tracking-widest text-xs text-black border-b-2 transition duration-500 border-transparent hover:text-green-400 hover:border-green-500">
+              <li className="uppercase tracking-widest font-normal text-xl text-black border-b-2 transition duration-500 border-transparent hover:text-green-400 hover:border-green-500">
                 <a href="/vision">Vision</a>
               </li>
-              <li className="uppercase tracking-widest text-black text-xs border-b-2 transition duration-500 border-transparent hover:text-green-400 hover:border-green-500">
+              <li className="uppercase tracking-widest font-normal text-black text-xl border-b-2 transition duration-500 border-transparent hover:text-green-400 hover:border-green-500">
        
                 <a href="/team">Team</a>
               </li>
-              <li className="uppercase tracking-widest text-xs text-slate-800 hover:text-white bg-green-400 hover:bg-green-700 px-6 py-2 rounded-full transition duration-500">
+              <li className="uppercase tracking-widest font-normal text-xl text-slate-800 hover:text-white bg-green-400 hover:bg-green-700 px-6 py-2 rounded-full transition duration-500">
         
                 <a href="/join">Join</a>
               </li>
