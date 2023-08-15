@@ -29,7 +29,7 @@ const WhatWeDo = () => {
           variants={variants}
           transition={{ duration: 0.5 }}
         >
-          Who We Are
+          What We Do
           <div className="absolute bottom-0 left-0 w-1/2 h-1 bg-green-500 transform rounded-lg translate-y-1"></div>
         </motion.h1>
         <motion.p
