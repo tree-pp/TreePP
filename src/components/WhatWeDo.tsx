@@ -17,39 +17,23 @@ const WhatWeDo = () => {
   };
 
   return (
-    <div className="flex flex-row bg-white items-center py-10">
-
-      <motion.p
-          className="w-3/5 pl-24 py-15 flex justify-start"
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          variants={variants}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-        <Image
-          className="rounded-3xl"
-          src="/WhatWeDo.png"
-          alt="What We Do"
-          width={0}
-          height={0}
-          sizes="100vw"
-          quality={100}
-          style={{ width: "65%", height: "auto" }} // optional
-        />
-      </motion.p>
-      <div className="w-2/5 py-16 pr-24 flex flex-col items-end" ref={ref}>
+    <div className="flex flex-col md:flex-row bg-white items-center md:py-10">
+      <div
+        className="md:w-1/2 pt-10 pb-4 md:py-10 md:pl-10 pl-6 md:order-2 mr-2 md:mr-10"
+        ref={ref}
+      >
         <motion.h1
-          className="relative text-3xl font-bold text-black text-right"
+          className="text-3xl font-bold text-black relative inline-block"
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={variants}
           transition={{ duration: 0.5 }}
         >
-          What We Do
-          <span className="absolute bottom-0 right-0 w-1/2 h-1 bg-green-500 transform translate-y-1"></span>
+          Who We Are
+          <div className="absolute bottom-0 left-0 w-1/2 h-1 bg-green-500 transform rounded-lg translate-y-1"></div>
         </motion.h1>
         <motion.p
-          className="mt-6 text-xl font-light text-slate-800 text-right"
+          className="tracking-normal mt-3 text-xl font-light text-slate-800 mr-5"
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={variants}
@@ -64,18 +48,39 @@ const WhatWeDo = () => {
         </motion.p>
         <div className="mt-5">
         <motion.p
-            className="uppercase tracking-widest text-black text-xl font-light border-b-2 transition duration-300 border-transparent hover:border-green-400"
+            className="uppercase tracking-widest text-black text-xl font-light hover:text-green-400"
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
             variants={variants}
-            transition={{ duration: 0, delay: 0 }}
+            transition={{ duration: 0, delay: 0.2 }}
          >
-            <Link href="/about">
+            <Link className="border-b-2 transition duration-300 border-transparent hover:border-green-500" href="/about">
             Learn More
             </Link>
           </motion.p>
+          
         </div>
       </div>
+      <motion.p className="md:w-2/5 pr-4 md:pr-6 md:pt-10 md:pl-20 pl-4 md:flex md:justify-start md:order-1"
+       initial="hidden"
+       animate={inView ? "visible" : "hidden"}
+       variants={variants}
+       transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        <Image
+          className="rounded-3xl"
+          src="/WhatWeDo.png"
+          alt="What We Do"
+          layout="responsive"
+          width={300}
+          height={200}
+          sizes="
+            (max-width: 320px) 100vw,
+            (max-width: 768px) 70vw,
+            60vw
+          "
+        />
+      </motion.p>
     </div>
   );
 };
