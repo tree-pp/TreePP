@@ -1,29 +1,25 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { BsFillArrowRightCircleFill } from "react-icons/bs";
+import Tree_Plant_Photo from "/public/WhatWeDo.png";
+import { FaArrowRight } from "react-icons/fa";
 
 const WhatWeDo = () => {
   return (
-    <div className="flex flex-row bg-white items-center py-10">
-      <div className="w-3/5 pl-24 py-15 flex justify-start">
+    <div className="flex flex-col md:flex-row items-center md:py-10 container mx-auto">
+      <div className="w-full py-10 md:flex">
         <Image
-          className="rounded-3xl"
-          src="/WhatWeDo.png"
-          alt="What We Do"
-          width={0}
-          height={0}
-          sizes="100vw"
-          quality={100}
-          style={{ width: "65%", height: "auto" }} // optional
+          className="rounded-3xl w-3/4 h-auto md:h-auto object-fill md:object-cover mx-auto"
+          src={Tree_Plant_Photo}
+          alt="Tree++ Group Photo"
         />
       </div>
-      <div className="w-2/5 py-16 pr-24 flex flex-col items-end">
-        <h1 className="relative text-3xl font-bold text-black text-right">
+      <div className="w-full md:w-3/4 md:py-10">
+        <h1 className="head-text relative inline-block">
           What We Do
-          <span className="absolute bottom-0 right-0 w-1/2 h-1 bg-green-500 transform translate-y-1"></span>
+          <div className="absolute bottom-0 left-0 w-1/2 h-1 bg-green-500 transform translate-y-1"></div>
         </h1>
-        <p className="mt-6 text-xl font-light text-slate-800 text-right">
+        <p className="mt-6 paragraph-text">
           At Tree++, we lead the charge towards a sustainable future by offering
           carbon offsetting through tree plantation. Our digital platform
           empowers individuals to calculate and purchase carbon offsets, while
@@ -34,9 +30,13 @@ const WhatWeDo = () => {
         <div className="mt-5">
           <Link
             href="/about"
-            className="uppercase tracking-widest text-black text-xl font-light border-b-2 transition duration-300 border-transparent hover:border-green-400"
+            className="text-black md:text-xl text-xs font-light"
           >
-            Learn More
+            <div className="flex items-center justify-end">
+              <span className="mt-3 flex uppercase items-center border-b-2 border-transparent hover:border-green-400">
+                Learn More <FaArrowRight className="md:ml-3 ml-1" />
+              </span>
+            </div>
           </Link>
         </div>
       </div>

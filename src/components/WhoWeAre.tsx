@@ -1,15 +1,16 @@
 import React from "react";
 import Image from "next/image";
+import Group_Photo from "public/WhoWeAre.jpeg";
 
 const WhoWeAre = () => {
   return (
-    <div className="flex flex-row bg-slate-50 items-center py-10">
-      <div className="w-2/5 py-16 pl-24">
-        <h1 className="text-3xl font-bold text-black relative inline-block">
+    <div className="flex flex-col md:flex-row items-center md:py-10 container mx-auto">
+      <div className="w-full md:w-3/4">
+        <h1 className="head-text relative inline-block">
           Who We Are
           <div className="absolute bottom-0 left-0 w-1/2 h-1 bg-green-500 transform translate-y-1"></div>
         </h1>
-        <p className="mt-6 text-xl font-light text-slate-800">
+        <p className="mt-6 paragraph-text">
           As a volunteer-driven non-profit, we are passionate about making a
           positive impact on the environment through tree plantation
           initiatives. Together, we strive to create a greener future by
@@ -17,15 +18,11 @@ const WhoWeAre = () => {
           fostering a sense of environmental stewardship within our communities.
         </p>
       </div>
-      <div className="w-3/5 pr-24 py-10 flex justify-end">
+      <div className="w-full md:flex">
         <Image
-          className="rounded-3xl"
-          src="/WhoWeAre.jpeg"
-          alt="Who We Are"
-          width={0}
-          height={0}
-          sizes="100vw"
-          style={{ width: "65%", height: "auto" }} // optional
+          className="rounded-3xl w-3/4 h-auto md:h-auto object-fill md:object-cover mx-auto"
+          src={Group_Photo}
+          alt="Tree++ Group Photo"
         />
       </div>
     </div>
