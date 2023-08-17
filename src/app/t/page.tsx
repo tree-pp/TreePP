@@ -31,9 +31,7 @@ export default function tree_details() {
         <div className="flex flex-col items-start w-2/3 mt-10">
           <p className="head-text">Recent</p>
           <div className="flex flex-col md:flex-row gap-x-10 items-center my-10 pl-2.5 pb-5">
-          <a href="/tree-details/000182"> {/* Replace with the appropriate URL */}
-    <ActivityImageCard src="/tree.jpeg" name="Banayan" id="000182" />
-  </a>
+            <ActivityImageCard src="/tree.jpeg" name="Banayan" id="000182" />
             <ActivityImageCard src="/tree.jpeg" name="Shegun" id="000183" />
             <ActivityImageCard src="/tree.jpeg" name="Papaya" id="000184" />
             <ActivityImageCard src="/tree1.jpeg" name="Mango" id="000185" />
