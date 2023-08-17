@@ -35,14 +35,15 @@ export default function Home() {
         <main>
           {/* <TopFeaturedSection /> */}
           {/* <WhatIsTreePP /> */}
-          <div className="px-5">
-            <WhoWeAre />
-            <WhatWeDo />
-            <HowItWorks />
-          </div>
-          <Activities />
-          <OurGoals />
-          <OurTeam />
+          
+  <div className="container w-11/12 mx-auto">
+  <WhoWeAre />
+  <WhatWeDo />
+  <HowItWorks />
+  <Activities />
+  <OurGoals />
+  <OurTeam />
+</div>
         </main>
       </div>
 

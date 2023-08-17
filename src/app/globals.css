@@ -9,11 +9,11 @@ body {
 }
 
 .head-text {
-  @apply tracking-tight font-extrabold leading-[1.15] text-black md:text-4xl text-lg;
+  @apply tracking-tight font-bold leading-[1.15] text-black md:text-4xl text-lg;
 }
 
 .paragraph-text {
-  @apply tracking-wide leading-[1.15] md:text-xl font-light text-slate-600 text-xs;
+  @apply tracking-wide leading-[1.15] md:text-2xl font-extralight text-slate-500 text-lg;
 }
 
 :root {
