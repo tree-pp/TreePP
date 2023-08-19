@@ -95,7 +95,7 @@ const OurGoals = () => {
   };
 
   return (
-    <div className="our-goals flex flex-col py-4 px-12  bg-slate-50" ref={ref}>
+    <div className="our-goals flex flex-col py-4 px-5 md:px-12  bg-slate-50" ref={ref}>
       <div className="flex flex-col justify-center items-center">
         <motion.h1
           className="text-black text-3xl font-bold text-center"
@@ -114,14 +114,14 @@ const OurGoals = () => {
       </div>
       <div>
         <motion.div
-          className="flex flex-row flex-wrap py-5 px-10 items-center"
+          className="flex flex-col md:flex-row flex-wrap py-5 px-5 md:px-10 items-center"
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={variants}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           {goalsData.slice(0).map((goal, index) => (
-            <div key={index} className="flex flex-row items-center w-1/3 px-3 py-5">
+            <div key={index} className="flex flex-row items-center justify-between w-1/3 px-3 py-5">
               <img src={goal.imageSrc} alt={`Goal ${index + 1}`} className="w-10 h-10" />
               <p className="px-5 text-lg font-light text-black leading-tight">{goal.text}</p>
             </div>

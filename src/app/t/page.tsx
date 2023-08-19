@@ -1,6 +1,7 @@
 "use client";
 import SearchBar from "../../components/SearchBar";
 import ActivityImageCard from "../../components/ActivityImageCard";
+import ActivityImageCardMobile from "../../components/ActivityImageCardMobile";
 import React, { useEffect, useState } from "react";
 
 export default function tree_details() {
@@ -53,14 +54,13 @@ export default function tree_details() {
           <p className="head-text">Recent</p>
           <div className="flex flex-col md:flex-row gap-x-10 gap-y-5 my-10 pl-2.5 pb-5 justify-center items-center"> {/* Center align */}
             <div className="flex flex-row flex-wrap gap-3"> {/* Adding gap between cards */}
-              <ActivityImageCard src="/tree.jpeg" name="Banayan" id="000182" />
-              <ActivityImageCard src="/tree.jpeg" name="Shegun" id="000183" />
-              <ActivityImageCard src="/tree.jpeg" name="Papaya" id="000184" />
-            </div>
-            <div className="flex flex-row flex-wrap gap-3"> {/* Adding gap between cards */}
-              <ActivityImageCard src="/tree1.jpeg" name="Mango" id="000185" />
-              <ActivityImageCard src="/tree1.jpeg" name="Apple" id="000186" />
-              <ActivityImageCard src="/tree1.jpeg" name="Apple" id="000186" />
+              <ActivityImageCardMobile src="/tree.jpeg" name="Banayan" />
+              <ActivityImageCardMobile src="/tree.jpeg" name="Shegun" />
+              <ActivityImageCardMobile src="/tree.jpeg" name="Papaya" />
+            
+              <ActivityImageCardMobile src="/tree1.jpeg" name="Mango" />
+              <ActivityImageCardMobile src="/tree1.jpeg" name="Apple" />
+              <ActivityImageCardMobile src="/tree1.jpeg" name="Apple" />
             </div>
           </div>
         </div>

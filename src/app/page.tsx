@@ -33,21 +33,18 @@ export default function Home() {
       {/* <Header title="Tree++" pages={sections} /> */}
       <div>
         <main>
-          {/* <TopFeaturedSection /> */}
-          {/* <WhatIsTreePP /> */}
-          
-  <div className="container w-11/12 mx-auto">
-  <WhoWeAre />
-  <WhatWeDo />
-  <HowItWorks />
-  <Activities />
-  <OurGoals />
-  <OurTeam />
-</div>
+
+          <div className="container w-11/12 mx-auto">
+            <WhoWeAre />
+            <WhatWeDo />
+            <HowItWorks />
+            <Activities />
+            <OurGoals />
+            <OurTeam />
+          </div>
         </main>
       </div>
 
-      {/* </ThemeProvider> */}
     </div>
   );
 }
