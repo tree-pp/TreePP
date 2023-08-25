@@ -110,8 +110,8 @@ export default function Bottomfooter() {
           </Link>
         </div>
       </div>
-      <div className="flex flex-row items-center justify-start">
-        <div className="flex-shrink-0">
+      <div className="flex md:flex-row items-center justify-start">
+        <div className="flex-shrink-0 invisible md:visible">
           <Image
             src="/footer_1.png"
             alt=""

@@ -96,7 +96,7 @@ export default function Activities() {
   }
   else {
     return (
-      <div className="py-10" ref={ref}>
+      <div className="py-5" ref={ref}>
         <div className="text-center">
           <motion.h2
             className="head-text relative inline-block"
@@ -109,7 +109,7 @@ export default function Activities() {
             <div className="absolute bottom left-1/2 transform -translate-x-1/2 translate-y-1/2 h-1 bg-green-500 w-20"></div>
           </motion.h2>
         </div>
-        <div className="mx-auto pl-5 pr-5 w-2xl my-16">
+        <div className="mx-auto pl-5 pr-5 w-2xl my-5">
           <motion.h6
             className="text-xl font-bold inline relative "
             initial="hidden"
@@ -146,7 +146,7 @@ export default function Activities() {
               Even more text
             </motion.p>
           </div>
-          <div className="flex flex-col md:flex-row gap-x-5 gap-y-5 my-10 pl-2.5 pb-5 justify-center items-center"> {/* Center align */}
+          <div className="flex flex-col md:flex-row gap-x-5 gap-y-5 my-5 pl-2.5 pb-5 justify-center items-center"> {/* Center align */}
             <div className="flex flex-row flex-wrap gap-3"> {/* Adding gap between cards */}
               <ActivityImageCardMobile src="/tree.jpeg" name="Banayan" />
               <ActivityImageCardMobile src="/tree.jpeg" name="Shegun" />
