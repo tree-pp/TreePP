@@ -14,11 +14,11 @@ export default function Navbar() {
 
   return (
     <div className="pr-4 lg:pr-14 pl-6 lg:pl-12 py-2 bg-slate-900 gap-y-8 lg:gap-y-0 flex items-center justify-between font-bold">
-    <Image
+    <Link href='/'><Image
         alt="TreePP Logo"
         width={135}
         height={54}
-        src="/homepage_logo.svg" />
+        src="/homepage_logo.svg" /> </Link>
       <nav>
         <section className="MOBILE-MENU flex lg:hidden">
 

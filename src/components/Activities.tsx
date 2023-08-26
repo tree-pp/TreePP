@@ -109,7 +109,7 @@ export default function Activities() {
             <div className="absolute bottom left-1/2 transform -translate-x-1/2 translate-y-1/2 h-1 bg-green-500 w-20"></div>
           </motion.h2>
         </div>
-        <div className="mx-auto pl-5 pr-5 w-2xl my-5">
+        <div className="mx-auto pl-5 pr-5 w-2xl my-5 text-slate-700">
           <motion.h6
             className="text-xl font-bold inline relative "
             initial="hidden"

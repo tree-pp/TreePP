@@ -15,7 +15,7 @@ export default function ActivityImageCard(props: AcitivityImageCardProps) {
     //   <span className='text-slate-500 text-sm font-normal italic'>{props.caption}</span>
     // </div>
     <div className='flex flex-col relative rounded-lg overflow-hidden w-1/4'>
-      <Link href="/t/${props.id}">
+      <Link href={`/t/${props.id}`}>
         <Image src={props.src} width={300} height={300} alt='Tree' className='' />
 
         <div className='absolute bottom-0 inset-x-0 px-4 pb-2 pt-8 bg-gradient-to-t from-black/90 to-black/0 flex justify-between items-end text-slate-300'>

@@ -11,7 +11,7 @@ export default function Page({ params }: { params: { treeId: string } }) {
         id={params.treeId}
         name='Swietenia Mahogoni'
         commonName='Mahogoni'
-        datePlanted='000182'
+        datePlanted='26/03/2023'
         donor='Mr. X'
         landOwner='Mr. Y'
         location='Gilatala, Khulna'
