@@ -3,6 +3,8 @@ import React from 'react';
 import SearchBar from '../../../components/SearchBar';
 import TreeDetails from '../../../components/TreeDetails';
 
+
+
 export default function Page({ params }: { params: { treeId: string } }) {
   return (
     <div className='flex flex-col justify-center items-center'>

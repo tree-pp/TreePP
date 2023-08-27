@@ -27,13 +27,13 @@ const Testimony = () => {
     };
 
     return (
-        <div className="flex flex-col items-center md:py-10 container mx-auto">
+        <div className="flex flex-col items-center py-5 md:py-10 container mx-auto text-slate-800">
             <div className="font-semibold text-3xl ">
                 <span>Testimony</span>
                 <div className="absolute bottom left-1/2 transform -translate-x-1/2 translate-y-1/2 h-1 bg-green-500 w-20"></div>
             </div>
             <div className="flex flex-row justify-between mt-10">
-                <div className="flex flex-col w-2/12 justify-center items-center">
+                <div className="flex flex-col w-3/12 md:w-2/12 justify-center items-center pl-5">
 
                     <Image src={Advisor_Photo} width={500} height={500} alt="advisor" className="rounded-full pl-25"></Image>
                     <div className="font-semibold text-xl pt-10">

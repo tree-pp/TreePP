@@ -99,7 +99,7 @@ const OurGoals = () => {
   };
 
   return (
-    <div className="our-goals flex flex-col md:py-4 md:px-5 md:px-12 py-4 px-2 bg-slate-50" ref={ref}>
+    <div className="our-goals flex flex-col md:py-10 md:px-5 md:px-12 py-4 px-2 bg-slate-50" ref={ref}>
       <div className="flex flex-col justify-center items-center">
         <motion.h1
           className="text-black text-3xl font-bold text-center"
