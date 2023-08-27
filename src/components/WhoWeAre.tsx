@@ -18,14 +18,10 @@ const WhoWeAre = () => {
     hidden: { opacity: 0, x: 20 },
     visible: { opacity: 1, x: 0 },
   };
-  
 
   return (
-    <div className="flex flex-col md:flex-row bg-slate-50 items-center md:py-10">
-      <div
-        className="md:w-1/2 pt-10 pb-4 md:py-10 md:pl-20 pl-6 md:order-1 mr-4 md:mr-20"
-        ref={ref}
-      >
+    <div className="flex flex-col md:flex-row items-center justify-center md:py-10 pt-10 mx-auto max-w-screen-2xl">
+      <div className="md:w-1/2 md:pr-20 md:order-1" ref={ref}>
         <motion.h1
           className="text-3xl font-bold text-black relative inline-block"
           initial="hidden"
@@ -50,24 +46,17 @@ const WhoWeAre = () => {
           fostering a sense of environmental stewardship within our communities.
         </motion.p>
       </div>
-      <motion.p className="md:w-2/5 pr-4 md:pr-6 md:pt-10 pl-4 md:flex md:justify-end md:order-2"
-       initial="hidden"
-       animate={inView ? "visible" : "hidden"}
-       variants={right}
-       transition={{ duration: 0.5, delay: 0.2 }}
+      <motion.p
+        className="md:w-1/2 pt-10 md:pt-0 md:flex md:justify-end md:order-2"
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={right}
+        transition={{ duration: 0.5, delay: 0.2 }}
       >
         <Image
-          className="rounded-3xl"
-          src="/WhoWeAre.jpeg"
-          alt="Who We Are"
-          layout="responsive"
-          width={300}
-          height={200}
-          sizes="
-            (max-width: 320px) 100vw,
-            (max-width: 768px) 70vw,
-            60vw
-          "
+          className="rounded-3xl w-full h-auto md:h-auto object-fill md:object-cover"
+          src={Group_Photo}
+          alt="Tree++ Group Photo"
         />
       </motion.p>
     </div>

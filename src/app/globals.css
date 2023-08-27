@@ -13,7 +13,7 @@ body {
 }
 
 .paragraph-text {
-  @apply tracking-wide leading-[1.15] md:text-2xl font-extralight text-slate-500 text-lg;
+  @apply tracking-wide leading-[1.15] md:text-xl font-extralight text-slate-700 text-base;
 }
 
 :root {
