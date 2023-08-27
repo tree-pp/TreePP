@@ -161,7 +161,7 @@ export default function Bottomfooter() {
           </Link>
         </div>
       </div>
-      <div className="flex flex-row items-center justify-start">
+      {/* <div className="flex flex-row items-center justify-start">
         <div className="flex-shrink-0">
           <Image
             src="/footer_1.png"
@@ -180,7 +180,23 @@ export default function Bottomfooter() {
             </span>
           </div>
         </div>
+      </div> */}
+      <div className="flex flex-col pb-0 flex-row md:justify-start">
+      <div className="flex-shrink-0">
+          <Image
+            src="/footer_1.png"
+            alt=""
+            className="md:h-40 md:w-auto h-30 w-40"
+            width="1"
+            height="1"
+            unoptimized
+          />
+        </div>
+        <div className=" items-center justify-center text-md text-white font-light text-center">
+        <p className="px-4 pb-2 inline-flex pt-0"><FaRegCopyright className="pr-1.5 mb-2 mx-auto md:mx-0 md:mr-2 pt-1" size="1.2rem" /> 2023 Tree++ | All rights reserved.</p>
+        </div>
       </div>
+
     </div>  
   );
 }
