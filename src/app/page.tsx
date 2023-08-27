@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import "./globals.css";
 
 import styles from "../styles/Home.module.css";
+import TopBanner from "@/components/TopBanner";
 import WhoWeAre from "@/components/WhoWeAre";
 import WhatWeDo from "@/components/WhatWeDo";
 import HowItWorks from "../components/HowItWorks";
@@ -33,6 +34,7 @@ export default function Home() {
 
       {/* <Header title="Tree++" pages={sections} /> */}
       <div>
+        <TopBanner />
         <main>
           <div className="bg-slate-50 px-5">
             <WhoWeAre />
