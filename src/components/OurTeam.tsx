@@ -26,7 +26,7 @@ const OurTeam = () => {
   };
 
   return (
-    <div className="our-goals flex flex-col py-4 px-4 md:px-12 bg-white" ref={ref}>
+    <div className="our-goals flex flex-col py-4 px-4 md:px-12" ref={ref}>
       <motion.div className="flex flex-col justify-center items-center mb-6">
         <motion.h1
           className="md:text-3xl text-black text-2xl font-bold text-center"
@@ -37,17 +37,20 @@ const OurTeam = () => {
         >
           Our Team
         </motion.h1>
-        <motion.p className="h-1 bg-green-500 md:w-24 w-20 rounded-full"
+        <motion.p
+          className="h-1 bg-green-500 md:w-24 w-20 rounded-full"
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={variants}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        ></motion.p>
+      </motion.div>
+      <motion.div
+        className="self-center flex-wrap"
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         variants={variants}
-        transition={{ duration: 0.5, delay:0.2 }}></motion.p>
-      </motion.div>
-      <motion.div className="self-center flex-wrap"
-      initial="hidden"
-      animate={inView ? "visible" : "hidden"}
-      variants={variants}
-      transition={{ duration: 0.5, delay:0.3}}
+        transition={{ duration: 0.5, delay: 0.3 }}
       >
         <Image
           src="/team.png"
@@ -57,11 +60,12 @@ const OurTeam = () => {
           style={imageStyle2}
         />
       </motion.div>
-      <motion.p className="flex justify-center mt-4"
-       initial="hidden"
-       animate={inView ? "visible" : "hidden"}
-       variants={variants}
-       transition={{ duration: 0.5, delay:0.5}}
+      <motion.p
+        className="flex justify-center mt-4"
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={variants}
+        transition={{ duration: 0.5, delay: 0.5 }}
       >
         <Link href="/Team">
           <span className="text-md text-black duration-300 border-b-2 border-green-500 hover:text-green-500 hover:border-green-600">
@@ -86,55 +90,57 @@ export default OurTeam;
 // }
 
 // const OurTeam = () => {
-  // --------Previous Code with separate images of team members------------
-  // const TeamInfo = [
-  //   {
-  //     imageSrc: "https://i.guim.co.uk/img/media/7b482387e8703a4abb253b8007b1eadcbe2ba822/1648_678_2104_1262/master/2104.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=edce965d6ff3ae12506e32af212bec24",
-  //     text: "CEO",
-  //   },
-  //   {
-  //     imageSrc: "https://i.guim.co.uk/img/media/7b482387e8703a4abb253b8007b1eadcbe2ba822/1648_678_2104_1262/master/2104.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=edce965d6ff3ae12506e32af212bec24",
-  //     text: "Chairman",
-  //   },
-  //   {
-  //     imageSrc: "https://i.guim.co.uk/img/media/7b482387e8703a4abb253b8007b1eadcbe2ba822/1648_678_2104_1262/master/2104.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=edce965d6ff3ae12506e32af212bec24",
-  //     text: "Accountant",
-  //   },
-  //   {
-  //     imageSrc: "https://i.guim.co.uk/img/media/7b482387e8703a4abb253b8007b1eadcbe2ba822/1648_678_2104_1262/master/2104.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=edce965d6ff3ae12506e32af212bec24",
-  //     text: "Manager",
-  //   },
-  //   {
-  //     imageSrc: "https://i.guim.co.uk/img/media/7b482387e8703a4abb253b8007b1eadcbe2ba822/1648_678_2104_1262/master/2104.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=edce965d6ff3ae12506e32af212bec24",
-  //     text: "Engineer",
-  //   },
-  //   {
-  //     imageSrc: "https://i.guim.co.uk/img/media/7b482387e8703a4abb253b8007b1eadcbe2ba822/1648_678_2104_1262/master/2104.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=edce965d6ff3ae12506e32af212bec24",
-  //     text: "Builder",
-  //   },
-   
-      
-  //   // Can add more person as needed
-  // ];
-  // return (
-  //   <div className="our-goals flex flex-col py-4 px-4 md:px-12 bg-white">
-  //     <div className="flex flex-col justify-center items-center mb-6">
-  //       <h1 className="md:text-3xl text-black text-2xl font-bold text-center">
-  //         Our Team
-  //       </h1>
-  //       <div className="h-1 bg-green-500 md:w-24 w-20 rounded-full"></div>
-  //     </div>
-  //     <div className="self-center flex-wrap">
-  //     <Image
-  //     src="/team.png"
-  //     width={800}
-  //     height={450}
-  //     alt="Picture of the team"
-  //     style={imageStyle2}
-  //     />
-  //     </div>
-      {/* --------------Code for showing each team member -------------------*/}
-      {/* <div className="flex flex-col md:flex-row md:flex-wrap mt-2 items-center">
+// --------Previous Code with separate images of team members------------
+// const TeamInfo = [
+//   {
+//     imageSrc: "https://i.guim.co.uk/img/media/7b482387e8703a4abb253b8007b1eadcbe2ba822/1648_678_2104_1262/master/2104.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=edce965d6ff3ae12506e32af212bec24",
+//     text: "CEO",
+//   },
+//   {
+//     imageSrc: "https://i.guim.co.uk/img/media/7b482387e8703a4abb253b8007b1eadcbe2ba822/1648_678_2104_1262/master/2104.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=edce965d6ff3ae12506e32af212bec24",
+//     text: "Chairman",
+//   },
+//   {
+//     imageSrc: "https://i.guim.co.uk/img/media/7b482387e8703a4abb253b8007b1eadcbe2ba822/1648_678_2104_1262/master/2104.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=edce965d6ff3ae12506e32af212bec24",
+//     text: "Accountant",
+//   },
+//   {
+//     imageSrc: "https://i.guim.co.uk/img/media/7b482387e8703a4abb253b8007b1eadcbe2ba822/1648_678_2104_1262/master/2104.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=edce965d6ff3ae12506e32af212bec24",
+//     text: "Manager",
+//   },
+//   {
+//     imageSrc: "https://i.guim.co.uk/img/media/7b482387e8703a4abb253b8007b1eadcbe2ba822/1648_678_2104_1262/master/2104.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=edce965d6ff3ae12506e32af212bec24",
+//     text: "Engineer",
+//   },
+//   {
+//     imageSrc: "https://i.guim.co.uk/img/media/7b482387e8703a4abb253b8007b1eadcbe2ba822/1648_678_2104_1262/master/2104.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=edce965d6ff3ae12506e32af212bec24",
+//     text: "Builder",
+//   },
+
+//   // Can add more person as needed
+// ];
+// return (
+//   <div className="our-goals flex flex-col py-4 px-4 md:px-12 bg-white">
+//     <div className="flex flex-col justify-center items-center mb-6">
+//       <h1 className="md:text-3xl text-black text-2xl font-bold text-center">
+//         Our Team
+//       </h1>
+//       <div className="h-1 bg-green-500 md:w-24 w-20 rounded-full"></div>
+//     </div>
+//     <div className="self-center flex-wrap">
+//     <Image
+//     src="/team.png"
+//     width={800}
+//     height={450}
+//     alt="Picture of the team"
+//     style={imageStyle2}
+//     />
+//     </div>
+{
+  /* --------------Code for showing each team member -------------------*/
+}
+{
+  /* <div className="flex flex-col md:flex-row md:flex-wrap mt-2 items-center">
         {TeamInfo.slice(0).map((person, index) => (
           <div
             key={index}
@@ -153,7 +159,8 @@ export default OurTeam;
             </p>
           </div>
         ))}
-      </div> */}
+      </div> */
+}
 //       <div className="flex justify-center mt-4">
 //         <Link href="/Team">
 //           <span className="text-md text-black duration-300 border-b-2 border-green-500 hover:text-green-500 hover:border-green-600">

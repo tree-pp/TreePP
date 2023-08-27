@@ -99,7 +99,7 @@ const OurGoals = () => {
   };
 
   return (
-    <div className="our-goals flex flex-col md:py-4 md:px-12 py-4 px-2 bg-slate-50" ref={ref}>
+    <div className="our-goals flex flex-col md:py-10 md:px-5 md:px-12 py-4 px-2 bg-slate-50" ref={ref}>
       <div className="flex flex-col justify-center items-center">
         <motion.h1
           className="text-black text-3xl font-bold text-center"
@@ -118,7 +118,7 @@ const OurGoals = () => {
       </div>
       <div>
         <motion.div
-          className="flex flex-row flex-wrap md:py-5 md:px-10 py-3 px-2 md:items-center"
+          className="flex flex-col md:flex-row flex-wrap md:py-5 md:px-5 md:px-10 py-3 px-2 md:items-center"
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={variants}
