@@ -34,19 +34,29 @@ export default function Home() {
       {/* <Header title="Tree++" pages={sections} /> */}
       <div>
         <main>
-
-          <div className="container w-11/12 mx-auto">
+          <div className="bg-slate-50 px-5">
             <WhoWeAre />
+          </div>
+          <div className="px-5">
             <WhatWeDo />
+          </div>
+          <div className="bg-slate-50 px-5">
             <HowItWorks />
+          </div>
+          <div className="px-5">
             <Activities />
+          </div>
+          <div className="bg-slate-50 px-5">
             <OurGoals />
+          </div>
+          <div className="px-5">
             <Testimony />
+          </div>
+          <div className="bg-slate-50 px-5">
             <OurTeam />
           </div>
         </main>
       </div>
-
     </div>
   );
 }
