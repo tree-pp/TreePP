@@ -37,7 +37,7 @@ const WhoWeAre = () => {
           <div className="absolute bottom-0 left-0 w-1/2 h-1 bg-green-500 transform rounded-lg translate-y-1"></div>
         </motion.h1>
         <motion.p
-          className="tracking-normal mt-3 paragraph-text mr-10"
+          className="tracking-normal mt-5 paragraph-text mr-10"
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={left}
