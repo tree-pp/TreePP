@@ -37,7 +37,7 @@ const WhoWeAre = () => {
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={left}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
         >
           As a volunteer-driven non-profit, we are passionate about making a
           positive impact on the environment through tree plantation
@@ -51,7 +51,7 @@ const WhoWeAre = () => {
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         variants={right}
-        transition={{ duration: 0.5, delay: 0.2 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
       >
         <Image
           className="rounded-3xl w-full h-auto md:h-auto object-fill md:object-cover"
