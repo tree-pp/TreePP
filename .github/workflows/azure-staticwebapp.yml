@@ -20,7 +20,6 @@ on:
     types: [opened, synchronize, reopened, closed]
     branches:
       - main
-      - staging
 
 # Environment variables available to all jobs and steps in this workflow
 env:
