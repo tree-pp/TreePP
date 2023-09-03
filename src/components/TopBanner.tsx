@@ -14,11 +14,15 @@ const TopBanner = () => {
         />
         <div className="md:absolute md:top-1/2 md:left-0 md:transform text-center md:text-left md:translate-x-24 z-10 flex flex-col items-center">
           <div className="hidden md:block">
-            <div className="tracking-tight font-extrabold leading-[0.8] text-black text-7xl">
-              Tree Plus Plus
+            <div className="tracking-tighter leading-[0.8] text-black text-6xl uppercase">
+              <div className="inline-block font-extrabold text-green-600">
+                Tree{" "}
+              </div>{" "}
+              <div className="inline-block font-thin">Plus Plus</div>
             </div>
-            <div className="font-extralight text-center text-slate-700 text-2xl">
-              Healing the environment, one tree at a time
+            <div className="font-thin text-center text-2xl text-slate-600">
+              <div className="inline-block">Healing the environment, </div>{" "}
+              <div className="inline-block">one tree at a time</div>
             </div>
           </div>
           {/* <div className="md:hidden mt-20">
