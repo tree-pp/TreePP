@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 const imageStyle = {
   borderRadius: "50%",
@@ -26,10 +27,10 @@ const OurTeam = () => {
   };
 
   return (
-    <div className="our-goals flex flex-col py-4 px-4 md:px-12" ref={ref}>
-      <motion.div className="flex flex-col justify-center items-center mb-6">
+    <div className="flex flex-col section-spacing" ref={ref}>
+      <motion.div className="flex flex-col justify-center items-center">
         <motion.h1
-          className="md:text-3xl text-black text-2xl font-bold text-center"
+          className="head-text text-center"
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={variants}
@@ -46,7 +47,7 @@ const OurTeam = () => {
         ></motion.p>
       </motion.div>
       <motion.div
-        className="self-center flex-wrap"
+        className="self-center flex-wrap mt-10"
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         variants={variants}
@@ -60,19 +61,16 @@ const OurTeam = () => {
           style={imageStyle2}
         />
       </motion.div>
-      <motion.p
-        className="flex justify-center mt-4"
+      {/* <motion.p
+        className="pt-10 flex justify-center items-center uppercase tracking-wide text-black md:text-xl text-sm font-light border-b-2 transition duration-300 border-transparent hover:border-green-500"
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         variants={variants}
         transition={{ duration: 0.5, delay: 0.5 }}
       >
-        <Link href="/Team">
-          <span className="text-md text-black duration-300 border-b-2 border-green-500 hover:text-green-500 hover:border-green-600">
-            See more
-          </span>
-        </Link>
-      </motion.p>
+        <Link href="/about">Learn More</Link>
+        <AiOutlineArrowRight className="ml-1" />
+      </motion.p> */}
     </div>
   );
 };

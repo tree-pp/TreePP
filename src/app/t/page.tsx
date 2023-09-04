@@ -4,7 +4,7 @@ import ActivityImageCard from '../../components/ActivityImageCard';
 import ActivityImageCardMobile from '../../components/ActivityImageCardMobile';
 import React, { useEffect, useState } from 'react';
 
-export default function TreeDetails() {
+export default function TreeDetailsPage() {
 	const [isLargeScreen, setIsLargeScreen] = useState(true);
 
 	useEffect(() => {

@@ -45,7 +45,7 @@
 //             </div>
 //           ))}
 //         </div>
-        
+
 //       </div>
 //     </div>
 //   );
@@ -64,29 +64,29 @@ const OurGoals = () => {
   };
   const goalsData = [
     {
-      imageSrc: 'coo.png',
-      text: 'Create climate resilient and zero-carbon world',
+      imageSrc: "coo.png",
+      text: "Create climate resilient and zero-carbon world",
     },
     {
-            imageSrc: 'planet-earth.png',
-           text: 'Rebuild food systems to nourish people and nature',
-         },
-         {
-           imageSrc: 'save-the-planet.png',
-           text: 'Conserve the world\'s most important forests',
-        },
-         {
-          imageSrc: 'sustainability.png',
-           text: 'Protect freshwater resources and landscapes',
-         },
-         {
-           imageSrc: 'tree.png',
-          text: 'Achieve healthy oceans and nature positive seascapes',
-          },
-          {
-           imageSrc: 'environmentalism.png',
-           text: 'Conserve wildlife and wild places',
-       },
+      imageSrc: "planet-earth.png",
+      text: "Rebuild food systems to nourish people and nature",
+    },
+    {
+      imageSrc: "save-the-planet.png",
+      text: "Conserve the world's most important forests",
+    },
+    {
+      imageSrc: "sustainability.png",
+      text: "Protect freshwater resources and landscapes",
+    },
+    {
+      imageSrc: "tree.png",
+      text: "Achieve healthy oceans and nature positive seascapes",
+    },
+    {
+      imageSrc: "environmentalism.png",
+      text: "Conserve wildlife and wild places",
+    },
   ];
 
   const [ref, inView] = useInView({
@@ -99,10 +99,10 @@ const OurGoals = () => {
   };
 
   return (
-    <div className="our-goals flex flex-col md:py-10 md:px-5 md:px-12 py-4 px-2 bg-slate-50" ref={ref}>
+    <div className="flex flex-col section-spacing pb-10" ref={ref}>
       <div className="flex flex-col justify-center items-center">
         <motion.h1
-          className="text-black text-3xl font-bold text-center"
+          className="head-text text-center"
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={variants}
@@ -110,30 +110,35 @@ const OurGoals = () => {
         >
           Our Goals
         </motion.h1>
-        <motion.div className="h-1 bg-green-500 w-20 rounded-full"
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-        variants={variants}
-        transition={{ duration: 0.5, delay: 0.2 }}></motion.div>
-      </div>
-      <div>
         <motion.div
-          className="flex flex-col md:flex-row flex-wrap md:py-5 md:px-5 md:px-10 py-3 px-2 md:items-center"
+          className="h-1 bg-green-500 w-20 rounded-full"
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={variants}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        ></motion.div>
+      </div>
+      <div className="md:pt-10 pt-5">
+        <motion.div
+          className="flex flex-col md:flex-row flex-wrap md:items-center px-5"
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={variants}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           {goalsData.slice(0).map((goal, index) => (
-            <div key={index} className="flex flex-row items-center md:w-1/3 w-full md:px-3 md:py-5 px-4 py-3">
+            <div
+              key={index}
+              className="flex flex-row items-center md:w-1/3 w-full md:py-5 py-2"
+            >
               <Image
-               src={goal.imageSrc}
-               width={50}
-               height={50}
-               alt={`Goal ${index + 1}`}
-               style={imageStyle2}
-        />
-              <p className="px-5 text-lg font-light text-black leading-tight">{goal.text}</p>
+                src={goal.imageSrc}
+                width={50}
+                height={50}
+                alt={`Goal ${index + 1}`}
+                style={imageStyle2}
+              />
+              <p className="px-5 paragraph-text">{goal.text}</p>
             </div>
           ))}
         </motion.div>

@@ -4,16 +4,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
 
 html,
-body {
+body,
+p {
   font-family: "Poppins", sans-serif;
+  color: black;
 }
 
 .head-text {
-  @apply tracking-tight font-bold leading-[1.15] text-black md:text-4xl text-lg;
+  @apply tracking-tight font-bold leading-[1.15] text-black md:text-4xl text-2xl;
+}
+
+.sub-head-text {
+  @apply tracking-tight font-semibold leading-[1.15] text-black md:text-2xl text-lg;
+}
+
+.caption-text {
+  @apply tracking-tight font-light text-slate-500 md:text-xl text-base;
 }
 
 .paragraph-text {
   @apply tracking-wide leading-[1.15] md:text-xl font-extralight text-slate-700 text-base;
+}
+
+.section-spacing {
+  @apply md:py-10 pt-10 mx-auto md:max-w-[75%] max-w-[80%];
 }
 
 :root {

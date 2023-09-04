@@ -36,25 +36,25 @@ export default function Home() {
       <div>
         <TopBanner />
         <main>
-          <div className="bg-slate-50 px-5">
+          <div className="bg-slate-50">
             <WhoWeAre />
           </div>
-          <div className="px-5">
+          <div className="">
             <WhatWeDo />
           </div>
-          <div className="bg-slate-50 px-5">
+          <div className="bg-slate-50">
             <HowItWorks />
           </div>
-          <div className="px-5">
+          <div className="">
             <Activities />
           </div>
-          <div className="bg-slate-50 px-5">
+          <div className="bg-slate-50">
             <OurGoals />
           </div>
-          <div className="px-5">
+          <div className="">
             <Testimony />
           </div>
-          <div className="bg-slate-50 px-5">
+          <div className="bg-slate-50">
             <OurTeam />
           </div>
         </main>
