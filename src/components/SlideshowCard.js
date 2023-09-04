@@ -14,7 +14,7 @@ export default function SlideshowCard() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentCard((prevCard) => (prevCard + 1) % cardData.length);
-        }, 7000);
+        }, 700);
 
         return () => clearInterval(interval);
     }, []);
@@ -24,24 +24,25 @@ export default function SlideshowCard() {
     };
 
     return (
-        <div>
-            <div className="flex flex-col items-center md:py-5 container mx-auto bg-green-200">
-                <div className="font-normal text-3xl ">
-                    <span>What Our <b>Advisors</b> Say</span>
-                    <div className="absolute bottom left-1/2 transform -translate-x-1/2 translate-y-1/2 h-1 bg-green-500 w-20"></div>
-                </div>
-                <div className="flex flex-col md:flex-row md:justify-between mt-5 items-center">
-                    <div className="flex flex-col md:flex-row w-5/12 md:justify-between items-center" >
+
+        <div className="flex flex-col items-stretch md:py-5 container mx-auto ">
+            <div className="font-normal text-3xl text-center">
+                <span>What Our <b>Advisors</b> Say</span>
+                <div className="absolute bottom left-1/2 transform -translate-x-1/2 translate-y-1/2 h-1 bg-green-500 w-20"></div>
+            </div>
+            <div>
+                <div className="flex flex-col md:flex-row md:justify-between mt-5 items-center w-full px-32">
+                    <div className="flex flex-col md:flex-row w-5/12 md:justify-start items-center" >
 
                         <Image src={cardData[currentCard].src} width={200} height={200} alt="advisor" className="rounded-full pl-25 bg-yellow-300"></Image>
-                        <div className="flex flex-col pl-5">
-                            <div className="font-semibold text-xl pt-10 pl-50 bg-blue-400" style={{ width: '300px', overflow: 'auto' }}>
+                        <div className="flex flex-col pl-10 ">
+                            <div className="font-semibold text-xl pt-10 " >
                                 {cardData[currentCard].name}
                             </div>
                             <span className='text-xs'>Big guy at big company</span>
                         </div>
                     </div>
-                    <div className=" bg-red-500 w-7/12 max-w-max" style={{ width: '500px'}}>
+                    <div className="w-7/12 bg-slate-50 p-10 rounded-xl text-start" >
                         <div style={{ whiteSpace: 'pre-wrap' }}>
                             {cardData[currentCard].quote}
                         </div>
