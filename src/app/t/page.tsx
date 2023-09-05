@@ -3,6 +3,7 @@ import SearchBar from '../../components/SearchBar';
 import ActivityImageCard from '../../components/ActivityImageCard';
 import ActivityImageCardMobile from '../../components/ActivityImageCardMobile';
 import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export default function TreeDetailsPage() {
 	const [isLargeScreen, setIsLargeScreen] = useState(true);
@@ -24,12 +25,14 @@ export default function TreeDetailsPage() {
 		// Render for larger screens
 		return (
 			<div className='flex flex-col justify-center items-center'>
+				<Image src='/placeholder_search.png' alt='Search Tree' width='250' height='300'className='my-20' />
+
 				<SearchBar />
-				<p className='pt-8 paragraph-text text-left'>
-					Each of our tree is tagged and is uniquely trackable. To find the
-					details of any tree search with the tree details.
+				<p className='pt-8 paragraph-text text-left font-extralight'>
+					Each of our tree is tagged and is uniquely trackable.<br/>
+					To find the details of any tree search with the tree details.
 				</p>
-				<div className='flex flex-col items-start w-2/3 mt-10'>
+				<div className='flex flex-col items-start w-2/3 mt-10 mb-10'>
 					<p className='head-text'>Recent</p>
 					<div className='flex flex-col md:flex-row gap-x-10 items-center my-10 pl-2.5 pb-5'>
 						<ActivityImageCard src='/tree.jpeg' name='Banayan' id='000182' />
