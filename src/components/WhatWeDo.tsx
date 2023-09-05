@@ -52,8 +52,8 @@ const WhatWeDo = () => {
             variants={variants}
             transition={{ duration: 0, delay: 0.2 }}
           >
-            <Link href="/about">Learn More</Link>
-            <AiOutlineArrowRight className="ml-1" />
+            <Link href="/about" className="text-green-700">Learn More</Link>
+            <AiOutlineArrowRight className="ml-1 text-green-700" />
           </motion.p>
         </div>
       </div>
