@@ -181,7 +181,7 @@ export default function Bottomfooter() {
             unoptimized
           />
         </div> */}
-        <div className=" items-center justify-center text-md text-white font-light text-center">
+        <div className=" items-center justify-center text-md text-slate-400 font-light text-center">
           <div className="px-4 md:pt-8 md:pb-10 pt-5 pb-5 inline-flex">
             <FaRegCopyright
               className="pr-1.5 mb-2 mx-auto md:mx-0 md:mr-2 pt-1"
