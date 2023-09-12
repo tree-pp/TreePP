@@ -17,7 +17,8 @@ import { AiFillGithub } from "react-icons/ai";
 export default function Bottomfooter() {
   return (
     <div className="bg-slate-900 text-white">
-      <div className="pr-24 pl-24 pt-10 flex flex-col md:flex-row gap-y-8 md:gap-y-0 justify-evenly gap-x-10 items-stretch">
+      <div className="bg-left-bottom bg-[length:190px] bg-[width:200px] md:bg-[length:210px] bg-[url('/footer_1.png')] bg-no-repeat">
+      <div className="pr-24 pl-24 pt-10 flex flex-col md:flex-row gap-y-8 md:gap-y-0 justify-evenly gap-x-10 items-stretch ">
         <div className="uppercase tracking-widest text-white font-medium text-center ">
           <h1 className="text-lg font-semibold pb-1.5">Tree++</h1>
           <Link
@@ -170,7 +171,7 @@ export default function Bottomfooter() {
         </div>
       </div> */}
       <div className="flex flex-col pb-0 flex-row md:justify-start">
-        <div className="flex-shrink-0">
+        {/* <div className="flex-shrink-0">
           <Image
             src="/footer_1.png"
             alt=""
@@ -179,9 +180,9 @@ export default function Bottomfooter() {
             height="1"
             unoptimized
           />
-        </div>
+        </div> */}
         <div className=" items-center justify-center text-md text-white font-light text-center">
-          <div className="px-4 pb-2 inline-flex pt-0">
+          <div className="px-4 md:pt-8 md:pb-10 pt-5 pb-5 inline-flex">
             <FaRegCopyright
               className="pr-1.5 mb-2 mx-auto md:mx-0 md:mr-2 pt-1"
               size="1.2rem"
@@ -189,6 +190,7 @@ export default function Bottomfooter() {
             2023 Tree++ | All rights reserved.
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
