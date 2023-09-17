@@ -42,17 +42,17 @@ export default function SlideshowCard() {
             </div>
             <div>
                 <div className="flex flex-col md:flex-row md:justify-between mt-5 items-center md:w-full md:px-32">
-                <div className={`flex flex-col md:flex-row pt-5 md:w-5/12 md:justify-start items-center transition-opacity ${isEntering ? 'opacity-100' : 'opacity-0'}`}>
+                <div className={`flex flex-col md:flex-row pt-5 md:w-5/12 md:justify-start items-center transition-opacity duration-1000 ease-in-out ${isEntering ? 'opacity-100' : 'opacity-0'}`}>
 
-                        <Image src={cardData[currentCard].src} width={200} height={200} alt="advisor" className="rounded-full pl-25 bg-yellow-300"></Image>
+                        <Image src={cardData[currentCard].src} width={200} height={200} alt="advisor" className="rounded-full pl-25  transition duration-1000 ease-in-out bg-yellow-300"></Image>
                         <div className="flex flex-col pl-10 ">
-                        <div className={`sub-head-text pt-10 text-center transition-opacity ${isEntering ? 'opacity-100' : 'opacity-0'}`}>
+                        <div className={`sub-head-text pt-10 text-center transition-opacity duration-1000 ease-in-out ${isEntering ? 'opacity-100' : 'opacity-0'}`}>
                                 {cardData[currentCard].name}
                             </div>
-                            <span className={`caption-text transition-opacity ${isEntering ? 'opacity-100' : 'opacity-0'}`}>Big guy at big company</span>
+                            <span className={`caption-text transition-opacity duration-1000 ease-in-out ${isEntering ? 'opacity-100' : 'opacity-0'}`}>Big guy at big company</span>
                         </div>
                     </div>
-                    <div className={`paragraph-text md:w-7/12 p-10 md:rounded-xl text-start transition-opacity ${isEntering ? 'opacity-100' : 'opacity-0'}`} >
+                    <div className={`paragraph-text md:w-7/12 p-10 md:rounded-xl text-start transition-opacity duration-1000 ease-in-out ${isEntering ? 'opacity-100' : 'opacity-0'}`} >
                         <div style={{ whiteSpace: 'pre-wrap' }}>
                             {cardData[currentCard].quote}
                         </div>
@@ -64,7 +64,7 @@ export default function SlideshowCard() {
                 {cardData.map((_, index) => (
                     <div
                         key={index}
-                        className={`h-2 w-2 mx-1 rounded-full ${index === currentCard ? 'bg-white' : 'bg-gray-300'
+                        className={`h-2 w-2 mx-1 rounded-full transition duration-1000 ease-in-out ${index === currentCard ? 'bg-white' : 'bg-gray-300'
                             } cursor-pointer`}
                         onClick={() => handleSlideChange(index)}
                     />
