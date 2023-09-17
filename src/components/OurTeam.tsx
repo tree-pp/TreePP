@@ -27,7 +27,7 @@ const OurTeam = () => {
   };
 
   return (
-    <div className="flex flex-col section-spacing" ref={ref}>
+    <div className="flex flex-col section-spacing " ref={ref}>
       <motion.div className="flex flex-col justify-center items-center">
         <motion.h1
           className="head-text text-center"
@@ -47,7 +47,7 @@ const OurTeam = () => {
         ></motion.p>
       </motion.div>
       <motion.div
-        className="self-center flex-wrap mt-10"
+        className="self-center flex-wrap mt-10 pb-5"
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         variants={variants}
