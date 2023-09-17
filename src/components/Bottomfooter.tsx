@@ -170,7 +170,7 @@ export default function Bottomfooter() {
           </div>
         </div>
       </div> */}
-      <div className="flex flex-col pb-0 flex-row md:justify-start">
+      <div className="flex md:flex-col pb-0 flex-row md:justify-start">
         {/* <div className="flex-shrink-0">
           <Image
             src="/footer_1.png"
