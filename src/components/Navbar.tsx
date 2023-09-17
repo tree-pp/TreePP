@@ -33,14 +33,14 @@ export default function Navbar() {
             <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px]">
               <li className="uppercase tracking-widest font-normal text-black text-xl border-b-2 transition duration-500 border-transparent hover:text-green-400 hover:border-green-500"
        >
-                <a href="/mission">Mission</a>
+                <a href="#mission">Mission</a>
               </li>
               <li className="uppercase tracking-widest font-normal text-xl text-black border-b-2 transition duration-500 border-transparent hover:text-green-400 hover:border-green-500">
-                <a href="/vision">Vision</a>
+                <a href="#vision">Vision</a>
               </li>
               <li className="uppercase tracking-widest font-normal text-black text-xl border-b-2 transition duration-500 border-transparent hover:text-green-400 hover:border-green-500">
        
-                <a href="/team">Team</a>
+                <a href="#team">Team</a>
               </li>
               <li className="uppercase tracking-widest font-normal text-xl text-slate-800 hover:text-white bg-green-400 hover:bg-green-700 px-6 py-2 rounded-full transition duration-500">
         
@@ -52,19 +52,19 @@ export default function Navbar() {
         <div className="DESKTOP-MENU hidden lg:flex gap-x-10 items-center">
        
         <Link
-          href="/mission"
+          href="#mission"
           className="uppercase tracking-widest text-xs text-white border-b-2 transition duration-500 border-transparent hover:text-green-400 hover:border-green-500"
         >
           Mission
         </Link>
         <Link
-          href="/vision"
+          href="#vision"
           className="uppercase tracking-widest text-white text-xs border-b-2 transition duration-500 border-transparent hover:text-green-400 hover:border-green-500"
         >
           Vision
         </Link>
         <Link
-          href="/team"
+          href="#team"
           className="uppercase tracking-widest text-white text-xs border-b-2 transition duration-500 border-transparent hover:text-green-400 hover:border-green-500"
         >
           Team

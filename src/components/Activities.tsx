@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import ActivityImageCard from "./ActivityImageCard";
 import ActivityImageCardMobile from "./ActivityImageCardMobile";
 import { useInView } from "react-intersection-observer";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 export default function Activities() {
   const [ref, inView] = useInView({
@@ -46,7 +47,7 @@ export default function Activities() {
           </motion.h2>
         </div>
         <div className="mx-auto md:pt-10 pt-5">
-          <motion.h6
+          {/* <motion.h6
             className="sub-head-text font-bold inline relative "
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
@@ -71,7 +72,6 @@ export default function Activities() {
               variants={variants}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              {/* Some more text */}
             </motion.p>
             <motion.p
               initial="hidden"
@@ -79,18 +79,27 @@ export default function Activities() {
               variants={variants}
               transition={{ duration: 0.5, delay: 0.8 }}
             >
-              {/* Even more text */}
-            </motion.p>
-          </div>
-          <div className="flex flex-col md:flex-row gap-x-10 items-center pt-10">
-            <ActivityImageCard src="/tree.jpeg" name="Banayan" id="000182" />
-            <ActivityImageCard src="/tree.jpeg" name="Shegun" id="000183" />
-            <ActivityImageCard src="/tree.jpeg" name="Papaya" id="000184" />
-            <ActivityImageCard src="/tree1.jpeg" name="Mango" id="000185" />
-            <ActivityImageCard src="/tree1.jpeg" name="Apple" id="000186" />
+            </motion.p> 
+          </div>*/}
+          <div className="flex flex-col">
+            <div className="flex flex-col md:flex-row gap-x-10 items-center pt-10">
+              <ActivityImageCard src="/tree.jpeg" name="Banayan" id="000182" />
+              <ActivityImageCard src="/tree.jpeg" name="Shegun" id="000183" />
+              <ActivityImageCard src="/tree.jpeg" name="Papaya" id="000184" />
+              <ActivityImageCard src="/tree1.jpeg" name="Mango" id="000185" />
+              <ActivityImageCard src="/tree1.jpeg" name="Apple" id="000186" />
+            </div>
+            <div className="flex justify-end mt-2">
+              <div className="flex items-center tracking-wide border-b-2 border-transparent hover:border-green-500">
+                <span className="">
+                  <Link href="/t" className="text-green-700">See More</Link>
+                </span>
+                <AiOutlineArrowRight className="ml-1 text-green-700" />
+              </div>
+            </div>
+
           </div>
         </div>
-        <div className="bg-red"></div>
       </div>
     );
   } else {

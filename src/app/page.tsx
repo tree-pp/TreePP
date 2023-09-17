@@ -39,10 +39,10 @@ export default function Home() {
           <div className="bg-slate-50">
             <WhoWeAre />
           </div>
-          <div className="">
+          <div className="" id="mission">
             <WhatWeDo />
           </div>
-          <div className="bg-slate-50">
+          <div className="bg-slate-50" id="vision">
             <HowItWorks />
           </div>
           <div className="">
@@ -54,7 +54,7 @@ export default function Home() {
           <div className="">
             <SlideshowCard />
           </div>
-          <div className="bg-slate-50">
+          <div className="bg-slate-50" id="team">
             <OurTeam />
           </div>
         </main>
