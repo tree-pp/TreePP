@@ -10,17 +10,26 @@ const cardData = [
 
 export default function SlideshowCard() {
     const [currentCard, setCurrentCard] = useState(0);
+    const [isEntering, setIsEntering] = useState(true);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentCard((prevCard) => (prevCard + 1) % cardData.length);
-        }, 700);
+            setIsEntering(false); // Set to false to start exit transition
+            setTimeout(() => {
+                setCurrentCard((prevCard) => (prevCard + 1) % cardData.length);
+                setIsEntering(true); // Set to true to start enter transition
+            }, 400); // Adjust the delay to match your desired transition time
+        }, 5000);
 
         return () => clearInterval(interval);
     }, []);
 
     const handleSlideChange = (index) => {
-        setCurrentCard(index);
+        setIsEntering(false); // Set to false to start exit transition
+        setTimeout(() => {
+            setCurrentCard(index);
+            setIsEntering(true); // Set to true to start enter transition
+        }, 500); // Adjust the delay to match your desired transition time
     };
 
     return (
@@ -32,17 +41,17 @@ export default function SlideshowCard() {
             </div>
             <div>
                 <div className="flex flex-col md:flex-row md:justify-between mt-5 items-center w-full px-32">
-                    <div className="flex flex-col md:flex-row w-5/12 md:justify-start items-center" >
+                <div className={`flex flex-col md:flex-row w-5/12 md:justify-start items-center transition-opacity ${isEntering ? 'opacity-100' : 'opacity-0'}`}>
 
                         <Image src={cardData[currentCard].src} width={200} height={200} alt="advisor" className="rounded-full pl-25 bg-yellow-300"></Image>
                         <div className="flex flex-col pl-10 ">
-                            <div className="font-semibold text-xl pt-10 " >
+                        <div className={`font-semibold text-xl pt-10 transition-opacity ${isEntering ? 'opacity-100' : 'opacity-0'}`}>
                                 {cardData[currentCard].name}
                             </div>
-                            <span className='text-xs'>Big guy at big company</span>
+                            <span className={`text-xs transition-opacity ${isEntering ? 'opacity-100' : 'opacity-0'}`}>Big guy at big company</span>
                         </div>
                     </div>
-                    <div className="w-7/12 bg-slate-50 p-10 rounded-xl text-start" >
+                    <div className={`w-7/12 p-10 rounded-xl text-start transition-opacity ${isEntering ? 'opacity-100' : 'opacity-0'}`} style={{ width: '500px' }}>
                         <div style={{ whiteSpace: 'pre-wrap' }}>
                             {cardData[currentCard].quote}
                         </div>
