@@ -20,10 +20,10 @@ const WhoWeAre = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center md:py-10 pt-10 mx-auto max-w-screen-2xl">
+    <div className="flex flex-col md:flex-row items-center justify-center md:py-10 pt-10 mx-auto section-spacing">
       <div className="md:w-1/2 md:pr-20 md:order-1" ref={ref}>
         <motion.h1
-          className="text-3xl font-bold text-black relative inline-block"
+          className="head-text relative inline-block"
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={left}
@@ -33,7 +33,7 @@ const WhoWeAre = () => {
           <div className="absolute bottom-0 left-0 w-1/2 h-1 bg-green-500 transform rounded-lg translate-y-1"></div>
         </motion.h1>
         <motion.p
-          className="tracking-normal mt-5 paragraph-text mr-10"
+          className="tracking-normal md:mt-10 mt-5 paragraph-text"
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={left}

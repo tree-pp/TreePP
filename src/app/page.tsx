@@ -10,7 +10,7 @@ import HowItWorks from "../components/HowItWorks";
 import Activities from "../components/Activities";
 import OurTeam from "@/components/OurTeam";
 import OurGoals from "@/components/OurGoals";
-import Testimony from "@/components/Testimony";
+import SlideshowCard from "@/components/SlideshowCard";
 
 // const theme = createTheme();
 // const sections = [
@@ -36,25 +36,25 @@ export default function Home() {
       <div>
         <TopBanner />
         <main>
-          <div className="bg-slate-50 px-5">
+          <div className="bg-slate-50">
             <WhoWeAre />
           </div>
-          <div className="px-5">
+          <div className="" id="mission">
             <WhatWeDo />
           </div>
-          <div className="bg-slate-50 px-5">
+          <div className="bg-slate-50" id="vision">
             <HowItWorks />
           </div>
-          <div className="px-5">
+          <div className="">
             <Activities />
           </div>
-          <div className="bg-slate-50 px-5">
+          <div className="bg-slate-50">
             <OurGoals />
           </div>
-          <div className="px-5">
-            <Testimony />
+          <div className="">
+            <SlideshowCard />
           </div>
-          <div className="bg-slate-50 px-5">
+          <div className="bg-slate-50" id="team">
             <OurTeam />
           </div>
         </main>

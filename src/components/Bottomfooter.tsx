@@ -6,51 +6,45 @@ import {
   FaLinkedinIn,
   FaGithubSquare,
   FaRegCopyright,
-  FaMapMarkerAlt, 
+  FaMapMarkerAlt,
   FaPhoneAlt,
   FaEnvelope,
-
 } from "react-icons/fa";
 
 import { CgOpenCollective } from "react-icons/cg";
+import { AiFillGithub } from "react-icons/ai";
 
 export default function Bottomfooter() {
   return (
-    <div className="bg-slate-900">
-      <div className="pr-24 pl-24 pt-10 flex flex-col md:flex-row gap-y-8 md:gap-y-0 justify-evenly gap-x-10 items-stretch">
+    <div className="bg-slate-900 text-white">
+      <div className="bg-left-bottom bg-[length:190px] bg-[width:200px] md:bg-[length:210px] bg-[url('/footer_1.png')] bg-no-repeat">
+      <div className="pr-24 pl-24 pt-10 flex flex-col md:flex-row gap-y-8 md:gap-y-0 justify-evenly gap-x-10 items-stretch ">
         <div className="uppercase tracking-widest text-white font-medium text-center ">
-            <h1 className="text-lg font-semibold pb-1.5">
-              Tree++
-            </h1>
-            <Link
-              href="https://maps.app.goo.gl/hNbTdR4gw9Uqn6Xk7"
-              className="pb-1.5 text-xs font-light inline-flex border-b-2 transition duration-300 border-transparent hover:border-green-400"
-              >
-                <FaMapMarkerAlt
-                  className="pr-3"
-                  size="1.4rem"
-                />
-                House#8, Road#6, Sector 13,
-                <br />
-                Uttara, Dhaka-1230, <br />
-                Bangladesh
-              </Link>
-              <br />
-            <div className="text-xs font-light leading-loose inline-flex justify-left pb-1.5">
-              <FaPhoneAlt
-                className="pr-3"
-                size="1.6rem"
-              />
-              +8801515669457 
-            </div>
+          <h1 className="text-lg font-semibold pb-1.5">Tree++</h1>
+          <Link
+            href="https://maps.app.goo.gl/hNbTdR4gw9Uqn6Xk7"
+            className="pb-1.5 text-xs font-light inline-flex border-b-2 transition duration-300 border-transparent hover:border-green-400"
+          >
+            <FaMapMarkerAlt className="pr-3" size="1.4rem" />
+            House#8, Road#6, Sector 13,
             <br />
-            <div className="text-xs font-light leading-loose inline-flex justify-left">
-              <FaEnvelope
-                className="pr-3"
-                size="1.6rem"
-              />
-              contact@treepp.org
-            </div>
+            Uttara, Dhaka-1230, <br />
+            Bangladesh
+          </Link>
+          <br />
+          <div className="text-xs font-light leading-loose inline-flex justify-left pb-1.5">
+            <FaPhoneAlt className="pr-3" size="1.6rem" />
+            +8801515669457
+          </div>
+          <br />
+          <div className="text-xs font-light leading-loose inline-flex justify-left">
+            <Link
+              href="mailto:contact@treepp.org"
+              className="text-xs font-light inline-flex border-b-2 transition duration-300 border-transparent hover:border-green-400 items-center"
+            >
+              <FaEnvelope className="pr-3" size="1.6rem" /> contact@treepp.org
+            </Link>
+          </div>
         </div>
         <div className="uppercase tracking-widest text-white font-medium text-center">
           <h1 className="text-lg font-semibold">
@@ -75,9 +69,7 @@ export default function Bottomfooter() {
             href="#"
             className="font-light text-xs border-b-2 transition duration-300 border-transparent hover:border-green-400"
           >
-            News{" "}
-            <br /
-            >
+            News <br />
           </Link>
           <Link
             href="#"
@@ -88,47 +80,43 @@ export default function Bottomfooter() {
           </Link>
         </div>
 
-
-        <div className="text-lg font-semibold uppercase tracking-widest text-white text-center">
+        <div className="text-lg font-semibold uppercase tracking-widest text-white text-center flex-row">
           Find us on:
           <br />
-          <div className="font-light text-xs inline-flex">
-            OpenCollective:{" "}
-            <Link href="https://opencollective.com/tree-pp">
-              <CgOpenCollective
-                className="border-b-2 transition duration-300 border-transparent hover:border-green-400"
-                size="1.25rem"
-              />
+          <div className="font-light text-xs inline-flex border-b-2 transition duration-300 border-transparent hover:border-green-400">
+            <Link
+              href="https://opencollective.com/tree-pp"
+              className="flex items-center"
+            >
+              <CgOpenCollective className="mr-2" size="1rem" /> OpenCollective
             </Link>
           </div>
           <br />
-          <div className="font-light text-xs inline-flex">
-            Facebook:{" "}
-            <Link href="https://www.facebook.com/treepp.org">
-              <FaFacebookF
-                className="border-b-2 transition duration-300 border-transparent hover:border-green-400"
-                size="1rem"
-              />
+          <div className="font-light text-xs inline-flex border-b-2 transition duration-300 border-transparent hover:border-green-400">
+            <Link
+              href="https://www.facebook.com/treepp.org"
+              className="flex items-center"
+            >
+              <FaFacebookF className="mr-2" size="1rem" /> Facebook
             </Link>
           </div>
           <br />
-          <div className="font-light text-xs inline-flex">
-            LinkedIn:{" "}
-            <Link href="https://www.linkedin.com/company/tree-pp/">
-              <FaLinkedinIn
-                className="border-b-2 transition duration-300 border-transparent hover:border-green-400"
-                size="1rem"
-              />
+          <div className="font-light text-xs inline-flex border-b-2 transition duration-300 border-transparent hover:border-green-400">
+            {" "}
+            <Link
+              href="https://www.linkedin.com/company/tree-pp/"
+              className="flex items-center"
+            >
+              <FaLinkedinIn className="mr-2" size="1rem" /> LinkedIn
             </Link>
           </div>
           <br />
-          <div className="font-light text-xs inline-flex">
-            Github:{" "}
-            <Link href="https://github.com/tree-pp">
-              <FaGithubSquare
-                className="border-b-2 transition duration-300 border-transparent hover:border-green-400"
-                size="1rem"
-              />
+          <div className="font-light text-xs inline-flex border-b-2 transition duration-300 border-transparent hover:border-green-400">
+            <Link
+              href="https://github.com/tree-pp"
+              className="flex items-center"
+            >
+              <AiFillGithub className="mr-2" size="1rem" /> Github
             </Link>
           </div>
           <br />
@@ -182,8 +170,8 @@ export default function Bottomfooter() {
           </div>
         </div>
       </div> */}
-      <div className="flex flex-col pb-0 flex-row md:justify-start">
-      <div className="flex-shrink-0">
+      <div className="flex md:flex-col pb-0 flex-row md:justify-start">
+        {/* <div className="flex-shrink-0">
           <Image
             src="/footer_1.png"
             alt=""
@@ -192,12 +180,18 @@ export default function Bottomfooter() {
             height="1"
             unoptimized
           />
-        </div>
-        <div className=" items-center justify-center text-md text-white font-light text-center">
-        <p className="px-4 pb-2 inline-flex pt-0"><FaRegCopyright className="pr-1.5 mb-2 mx-auto md:mx-0 md:mr-2 pt-1" size="1.2rem" /> 2023 Tree++ | All rights reserved.</p>
+        </div> */}
+        <div className=" items-center justify-center text-md text-slate-400 font-light text-center">
+          <div className="px-4 md:pt-8 md:pb-10 pt-5 pb-5 inline-flex">
+            <FaRegCopyright
+              className="pr-1.5 mb-2 mx-auto md:mx-0 md:mr-2 pt-1"
+              size="1.2rem"
+            />{" "}
+            2023 Tree++ | All rights reserved.
+          </div>
         </div>
       </div>
-
-    </div>  
+      </div>
+    </div>
   );
 }
