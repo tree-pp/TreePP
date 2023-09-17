@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
@@ -35,7 +36,7 @@ export default function SlideshowCard() {
     return (
 
         <div className="flex flex-col items-stretch md:py-5 container mx-auto ">
-            <div className="font-normal text-3xl text-center">
+            <div className="head-text text-center">
                 <span>What Our <b>Advisors</b> Say</span>
                 <div className="absolute bottom left-1/2 transform -translate-x-1/2 translate-y-1/2 h-1 bg-green-500 w-20"></div>
             </div>
@@ -45,13 +46,13 @@ export default function SlideshowCard() {
 
                         <Image src={cardData[currentCard].src} width={200} height={200} alt="advisor" className="rounded-full pl-25 bg-yellow-300"></Image>
                         <div className="flex flex-col pl-10 ">
-                        <div className={`font-semibold text-xl pt-10 transition-opacity ${isEntering ? 'opacity-100' : 'opacity-0'}`}>
+                        <div className={`sub-head-text pt-10 transition-opacity ${isEntering ? 'opacity-100' : 'opacity-0'}`}>
                                 {cardData[currentCard].name}
                             </div>
-                            <span className={`text-xs transition-opacity ${isEntering ? 'opacity-100' : 'opacity-0'}`}>Big guy at big company</span>
+                            <span className={`caption-text transition-opacity ${isEntering ? 'opacity-100' : 'opacity-0'}`}>Big guy at big company</span>
                         </div>
                     </div>
-                    <div className={`w-7/12 p-10 rounded-xl text-start transition-opacity ${isEntering ? 'opacity-100' : 'opacity-0'}`} style={{ width: '500px' }}>
+                    <div className={`paragraph-text w-7/12 p-10 rounded-xl text-start transition-opacity ${isEntering ? 'opacity-100' : 'opacity-0'}`} style={{ width: '500px' }}>
                         <div style={{ whiteSpace: 'pre-wrap' }}>
                             {cardData[currentCard].quote}
                         </div>

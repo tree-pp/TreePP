@@ -11,7 +11,7 @@ p {
 }
 
 .head-text {
-  @apply tracking-tight font-bold leading-[1.15] text-black md:text-4xl text-2xl;
+  @apply tracking-tight font-normal leading-[1.15] text-black md:text-4xl text-2xl;
 }
 
 .sub-head-text {

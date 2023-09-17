@@ -10,7 +10,7 @@ import HowItWorks from "../components/HowItWorks";
 import Activities from "../components/Activities";
 import OurTeam from "@/components/OurTeam";
 import OurGoals from "@/components/OurGoals";
-import Testimony from "@/components/Testimony";
+import SlideshowCard from "@/components/SlideshowCard";
 
 // const theme = createTheme();
 // const sections = [
@@ -52,7 +52,7 @@ export default function Home() {
             <OurGoals />
           </div>
           <div className="">
-            <Testimony />
+            <SlideshowCard />
           </div>
           <div className="bg-slate-50">
             <OurTeam />
