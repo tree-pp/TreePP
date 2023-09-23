@@ -72,7 +72,7 @@ export default function SlideshowCard() {
                     </div>
                     <div className={`paragraph-text md:w-full pl-8 pr-6 pt-10 lg:pt-6 lg:pr-20 text-center transition-opacity duration-1000 ${isEntering ? 'opacity-100' : 'opacity-0'}`}>
                         <div style={{ whiteSpace: 'pre-wrap' }}>
-                            <div class="max-w-4xl p-4 text-gray-800 bg-indigo-200 rounded-lg shadow transition-opacity duration-1000" style={{ opacity: isEntering ? 1 : 0 }}>
+                            <div class="max-w-4xl p-4 text-gray-800 bg-amber-100 rounded-lg shadow transition-opacity duration-1000" style={{ opacity: isEntering ? 1 : 0 }}>
                                 <div class="mb-2">
                                     <div class="h-5 text-3xl italic text-left text-gray-600">“</div>
                                     <p class="px-4 text-lg text-center italic font-serif text-gray-600">
