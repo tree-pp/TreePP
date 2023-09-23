@@ -7,6 +7,7 @@ import ActivityImageCardMobile from "./ActivityImageCardMobile";
 import { useInView } from "react-intersection-observer";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
+
 export default function Activities() {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -46,7 +47,12 @@ export default function Activities() {
             <div className="absolute bottom left-1/2 transform -translate-x-1/2 translate-y-1/2 h-1 bg-green-500 w-20"></div>
           </motion.h2>
         </div>
-        <div className="mx-auto md:pt-10 pt-5">
+        <motion.h2
+         className="mx-auto md:pt-6 pt-5"
+         initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={variants}
+            transition={{ duration: 0.5 }}>
           {/* <motion.h6
             className="sub-head-text font-bold inline relative "
             initial="hidden"
@@ -99,8 +105,9 @@ export default function Activities() {
             </div>
 
           </div>
+          </motion.h2>
         </div>
-      </div>
+     
     );
   } else {
     return (
