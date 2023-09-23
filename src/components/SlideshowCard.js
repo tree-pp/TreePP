@@ -57,7 +57,7 @@ export default function SlideshowCard() {
          {/* <div className="flex flex-col py-10 container mx-auto">  */}
             <div className="head-text text-center">
                 <span>What Our <b>Advisors</b> Say</span>
-                <div className="absolute bottom left-1/2 transform -translate-x-1/2 translate-y-1/2 h-1 bg-green-500 w-28 ml-11 rounded-full"></div>
+                <div className="absolute bottom left-1/2 transform -translate-x-1/2 translate-y-1/2 h-1 bg-green-500 md:w-28 md:ml-11 w-20 ml-8 rounded-full"></div>
             </div>
             <div>
                 <div className="flex flex-col md:flex-row md:justify-between mt-5 items-center lg:w-full lg:px-8">
