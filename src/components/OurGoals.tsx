@@ -108,10 +108,10 @@ const OurGoals = () => {
           variants={variants}
           transition={{ duration: 0.5 }}
         >
-          Our Goals
+          Our <b>Goals</b>
         </motion.h1>
         <motion.div
-          className="h-1 bg-green-500 w-20 rounded-full"
+          className="h-1 bg-green-500 w-16 rounded-full"
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={variants}
