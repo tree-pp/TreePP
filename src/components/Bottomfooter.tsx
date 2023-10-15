@@ -22,7 +22,7 @@ export default function Bottomfooter() {
         <div className="uppercase tracking-widest text-white font-medium text-center ">
           <h1 className="text-lg font-semibold pb-1.5">Tree++</h1>
           <Link
-            href="https://maps.app.goo.gl/hNbTdR4gw9Uqn6Xk7"
+            href="https://maps.app.goo.gl/gpLpvBUav4j8mveW9"
             className="pb-1.5 text-xs font-light inline-flex border-b-2 transition duration-300 border-transparent hover:border-green-400"
           >
             <FaMapMarkerAlt className="pr-3" size="1.4rem" />
@@ -128,21 +128,21 @@ export default function Bottomfooter() {
             <br />
           </h1>
           <Link
-            href="#"
+            href="/contact"
             className="font-light text-xs border-b-2 transition duration-300 border-transparent hover:border-green-400"
           >
             Contact us
             <br />
           </Link>
           <Link
-            href="#"
+            href="/legals"
             className="font-light text-xs border-b-2 transition duration-300 border-transparent hover:border-green-400"
           >
             Legals
             <br />
           </Link>
           <Link
-            href="#"
+            href="/privacy-policy"
             className="font-light text-xs border-b-2 transition duration-300 border-transparent hover:border-green-400"
           >
             Data policy
