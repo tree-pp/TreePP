@@ -18,67 +18,67 @@ export default function Bottomfooter() {
   return (
     <div className="bg-slate-900 text-white">
       <div className="bg-left-bottom bg-[length:190px] bg-[width:200px] md:bg-[length:210px] bg-[url('/footer_1.png')] bg-no-repeat">
-        <div className="pr-24 pl-24 pt-10 flex flex-col md:flex-row gap-y-8 md:gap-y-0 justify-evenly gap-x-10 items-stretch ">
-          <div className="uppercase tracking-widest text-white font-medium text-center ">
-            <h1 className="text-lg font-semibold pb-1.5">Tree++</h1>
-            <Link
-              href="https://maps.app.goo.gl/hNbTdR4gw9Uqn6Xk7"
-              className="pb-1.5 text-xs font-light inline-flex border-b-2 transition duration-300 border-transparent hover:border-green-400"
-            >
-              <FaMapMarkerAlt className="pr-3" size="1.4rem" />
-              House#8, Road#6, Sector 13,
-              <br />
-              Uttara, Dhaka-1230, <br />
-              Bangladesh
-            </Link>
+      <div className="pr-24 pl-24 pt-10 flex flex-col md:flex-row gap-y-8 md:gap-y-0 justify-evenly gap-x-10 items-stretch ">
+        <div className="uppercase tracking-widest text-white font-medium text-center ">
+          <h1 className="text-lg font-semibold pb-1.5">Tree++</h1>
+          <Link
+            href="https://maps.app.goo.gl/gpLpvBUav4j8mveW9"
+            className="pb-1.5 text-xs font-light inline-flex border-b-2 transition duration-300 border-transparent hover:border-green-400"
+          >
+            <FaMapMarkerAlt className="pr-3" size="1.4rem" />
+            House#8, Road#6, Sector 13,
             <br />
-            <div className="text-xs font-light leading-loose inline-flex justify-left pb-1.5">
-              <FaPhoneAlt className="pr-3" size="1.6rem" />
-              +8801515669457
-            </div>
-            <br />
-            <div className="text-xs font-light leading-loose inline-flex justify-left">
-              <Link
-                href="mailto:contact@treepp.org"
-                className="text-xs font-light inline-flex border-b-2 transition duration-300 border-transparent hover:border-green-400 items-center"
-              >
-                <FaEnvelope className="pr-3" size="1.6rem" /> contact@treepp.org
-              </Link>
-            </div>
+            Uttara, Dhaka-1230, <br />
+            Bangladesh
+          </Link>
+          <br />
+          <div className="text-xs font-light leading-loose inline-flex justify-left pb-1.5">
+            <FaPhoneAlt className="pr-3" size="1.6rem" />
+            +8801515669457
           </div>
-          <div className="uppercase tracking-widest text-white font-medium text-center">
-            <h1 className="text-lg font-semibold">
-              About us
-              <br />
-            </h1>
+          <br />
+          <div className="text-xs font-light leading-loose inline-flex justify-left">
             <Link
-              href="#"
-              className="font-light text-xs border-b-2 transition duration-300 border-transparent hover:border-green-400"
+              href="mailto:contact@treepp.org"
+              className="text-xs font-light inline-flex border-b-2 transition duration-300 border-transparent hover:border-green-400 items-center"
             >
-              Whitepaper
-              <br />
-            </Link>
-            <Link
-              href="#"
-              className="font-light text-xs border-b-2 transition duration-300 border-transparent hover:border-green-400"
-            >
-              Story
-              <br />
-            </Link>
-            <Link
-              href="#"
-              className="font-light text-xs border-b-2 transition duration-300 border-transparent hover:border-green-400"
-            >
-              News <br />
-            </Link>
-            <Link
-              href="#"
-              className="font-light text-xs border-b-2 transition duration-300 border-transparent hover:border-green-400"
-            >
-              FAQ
-              <br />
+              <FaEnvelope className="pr-3" size="1.6rem" /> contact@treepp.org
             </Link>
           </div>
+        </div>
+        <div className="uppercase tracking-widest text-white font-medium text-center">
+          <h1 className="text-lg font-semibold">
+            About us
+            <br />
+          </h1>
+          <Link
+            href="#"
+            className="font-light text-xs border-b-2 transition duration-300 border-transparent hover:border-green-400"
+          >
+            Whitepaper
+            <br />
+          </Link>
+          <Link
+            href="#"
+            className="font-light text-xs border-b-2 transition duration-300 border-transparent hover:border-green-400"
+          >
+            Story
+            <br />
+          </Link>
+          <Link
+            href="#"
+            className="font-light text-xs border-b-2 transition duration-300 border-transparent hover:border-green-400"
+          >
+            News <br />
+          </Link>
+          <Link
+            href="#"
+            className="font-light text-xs border-b-2 transition duration-300 border-transparent hover:border-green-400"
+          >
+            FAQ
+            <br />
+          </Link>
+        </div>
 
           <div className="text-lg font-semibold uppercase tracking-widest text-white text-center flex-row">
             Find us on:
@@ -122,34 +122,34 @@ export default function Bottomfooter() {
             <br />
           </div>
 
-          <div className="text-lg font-semibold uppercase tracking-widest text-white text-center">
-            <h1 className="text-md">
-              Learn more
-              <br />
-            </h1>
-            <Link
-              href="#"
-              className="font-light text-xs border-b-2 transition duration-300 border-transparent hover:border-green-400"
-            >
-              Contact us
-              <br />
-            </Link>
-            <Link
-              href="#"
-              className="font-light text-xs border-b-2 transition duration-300 border-transparent hover:border-green-400"
-            >
-              Legals
-              <br />
-            </Link>
-            <Link
-              href="#"
-              className="font-light text-xs border-b-2 transition duration-300 border-transparent hover:border-green-400"
-            >
-              Data policy
-            </Link>
-          </div>
+        <div className="text-lg font-semibold uppercase tracking-widest text-white text-center">
+          <h1 className="text-md">
+            Learn more
+            <br />
+          </h1>
+          <Link
+            href="/contact"
+            className="font-light text-xs border-b-2 transition duration-300 border-transparent hover:border-green-400"
+          >
+            Contact us
+            <br />
+          </Link>
+          <Link
+            href="/legals"
+            className="font-light text-xs border-b-2 transition duration-300 border-transparent hover:border-green-400"
+          >
+            Legals
+            <br />
+          </Link>
+          <Link
+            href="/privacy-policy"
+            className="font-light text-xs border-b-2 transition duration-300 border-transparent hover:border-green-400"
+          >
+            Data policy
+          </Link>
         </div>
-        {/* <div className="flex flex-row items-center justify-start">
+      </div>
+      {/* <div className="flex flex-row items-center justify-start">
         <div className="flex-shrink-0">
           <Image
             src="/footer_1.png"
