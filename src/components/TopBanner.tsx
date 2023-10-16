@@ -27,21 +27,21 @@ const TopBanner = () => {
         </div>
       </div>
 
-      <div className="hidden md:block relative flex-col items-center container mx-auto min-w-full min-h-full z-0 rounded-full">
+      <div className="hidden md:block relative flex-col items-center min-w-full min-h-full z-0 rounded-full">
         {/* Content for medium and large screens */}
         <Image
           className="w-full h-auto md:h-auto object-fill md:object-cover"
           src={TreePP_Topbanner}
           alt="Tree++ Top Banner"
         />
-        <div className="md:absolute md:top-1/2 md:left-0 md:transform text-center md:text-left md:translate-x-24 z-10 flex flex-col items-center">
-          <div className="tracking-tighter leading-[0.8] text-black text-6xl uppercase">
+        <div className="md:absolute md:top-1/4 md:left-0 md:transform text-center md:text-left md:translate-x-24 z-10 flex flex-col items-center">
+          <div className="tracking-tighter leading-[0.8] text-black text-7xl uppercase">
             <div className="inline-block font-extrabold text-green-600">
               Tree{" "}
             </div>{" "}
             <div className="inline-block font-light">Plus Plus</div>
           </div>
-          <div className="font-thin text-center text-2xl text-slate-600">
+          <div className="font-thin tracking-tight text-center text-3xl text-slate-600">
             <div className="inline-block">Healing the environment, </div>{" "}
             <div className="inline-block">one tree at a time</div>
           </div>

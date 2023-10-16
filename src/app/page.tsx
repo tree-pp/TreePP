@@ -34,7 +34,7 @@ export default function Home() {
 
       {/* <Header title="Tree++" pages={sections} /> */}
       <div className="md:overflow-x-hidden">
-        <div className="md:h-screen md:w-screen bg-slate-50">
+        <div className="md:h-screen md:w-screen bg-slate-50 md:flex md:flex-col md:justify-end">
           <TopBanner />
         </div>
         <main>
