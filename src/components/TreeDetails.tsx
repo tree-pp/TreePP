@@ -1,15 +1,15 @@
 import Image from 'next/image';
 
 interface treeProps {
-	id: String;
-	name: String;
-	commonName: String;
-	datePlanted: String;
-	donor: String;
-	landOwner: String;
-	location: String;
-	landType: String;
-	image: String;
+	id: string;
+	name: string;
+	commonName: string;
+	datePlanted: string;
+	donor: string;
+	landOwner: string;
+	location: string;
+	landType: string;
+	image: string;
 }
 // interface CardProps {
 //     title: string;
@@ -18,7 +18,7 @@ interface treeProps {
 //     icon: string;
 //   }
 
-export default function TreeDetails(tree) {
+export default function TreeDetails(tree: treeProps) {
 	return (
 		console.log(tree),
 		(
