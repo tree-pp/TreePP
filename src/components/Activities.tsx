@@ -43,7 +43,7 @@ export default function Activities() {
             variants={variants}
             transition={{ duration: 0.5 }}
           >
-            Our Activities
+            Recent Activities
             <div className="absolute bottom left-1/2 transform -translate-x-1/2 translate-y-1/2 h-1 bg-green-500 w-20"></div>
           </motion.h2>
         </div>
