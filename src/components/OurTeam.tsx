@@ -85,21 +85,21 @@ const OurTeam = () => {
                 <img
                   alt="gallery"
                   className="block h-full w-full rounded-lg object-cover object-center"
-                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp"
+                  src="https://cdn.discordapp.com/attachments/742358259696140319/1163557076681891930/image5.jpg"
                 />
               </div>
               <div className="w-1/2 p-1 md:p-2">
                 <img
                   alt="gallery"
                   className="block h-full w-full rounded-lg object-cover object-center"
-                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp"
+                  src="https://cdn.discordapp.com/attachments/742358259696140319/1163548720470700092/image3.jpeg"
                 />
               </div>
               <div className="w-full p-1 md:p-2">
                 <img
                   alt="gallery"
                   className="block h-full w-full rounded-lg object-cover object-center"
-                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+                  src="https://cdn.discordapp.com/attachments/742358259696140319/1163548019518607451/image2_landscape.jpg"
                 />
               </div>
             </div>
@@ -108,10 +108,10 @@ const OurTeam = () => {
                 <img
                   alt="gallery"
                   className="block h-full w-full rounded-lg object-cover object-center"
-                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp"
+                  src="https://cdn.discordapp.com/attachments/742358259696140319/1163549652331810963/image1.jpeg"
                 />
               </div>
-              <div className="w-1/2 p-1 md:p-2">
+              {/* <div className="w-1/2 p-1 md:p-2">
                 <img
                   alt="gallery"
                   className="block h-full w-full rounded-lg object-cover object-center"
@@ -124,7 +124,7 @@ const OurTeam = () => {
                   className="block h-full w-full rounded-lg object-cover object-center"
                   src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(77).webp"
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
