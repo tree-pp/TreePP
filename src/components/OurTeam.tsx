@@ -36,7 +36,7 @@ const OurTeam = () => {
           variants={variants}
           transition={{ duration: 0.5 }}
         >
-          Our Team
+          Our <b>Team</b>
         </motion.h1>
         <motion.p
           className="h-1 bg-green-500 md:w-24 w-20 rounded-full"

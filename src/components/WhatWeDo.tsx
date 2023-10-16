@@ -27,7 +27,7 @@ const WhatWeDo = () => {
           variants={variants}
           transition={{ duration: 0.5 }}
         >
-          What We Do
+          <b>What We Do</b>
           <div className="absolute bottom-0 left-0 w-1/2 h-1 bg-green-500 transform rounded-lg translate-y-1"></div>
         </motion.h1>
         <motion.p
@@ -52,7 +52,9 @@ const WhatWeDo = () => {
             variants={variants}
             transition={{ duration: 0, delay: 0.2 }}
           >
-            <Link href="/about" className="text-green-700">Learn More</Link>
+            <Link href="/about" className="text-green-700">
+              Learn More
+            </Link>
             <AiOutlineArrowRight className="ml-1 text-green-700" />
           </motion.p>
         </div>

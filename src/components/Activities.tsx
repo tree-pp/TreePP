@@ -7,7 +7,6 @@ import ActivityImageCardMobile from "./ActivityImageCardMobile";
 import { useInView } from "react-intersection-observer";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
-
 export default function Activities() {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -43,16 +42,17 @@ export default function Activities() {
             variants={variants}
             transition={{ duration: 0.5 }}
           >
-            Our Activities
+            Our <b>Activities</b>
             <div className="absolute bottom left-1/2 transform -translate-x-1/2 translate-y-1/2 h-1 bg-green-500 w-20"></div>
           </motion.h2>
         </div>
         <motion.h2
-         className="mx-auto md:pt-6 pt-5"
-         initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={variants}
-            transition={{ duration: 0.5 }}>
+          className="mx-auto md:pt-6 pt-5"
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={variants}
+          transition={{ duration: 0.5 }}
+        >
           {/* <motion.h6
             className="sub-head-text font-bold inline relative "
             initial="hidden"
@@ -98,16 +98,16 @@ export default function Activities() {
             <div className="flex justify-end mt-2">
               <div className="flex items-center tracking-wide border-b-2 border-transparent hover:border-green-500">
                 <span className="">
-                  <Link href="/t" className="text-green-700">See More</Link>
+                  <Link href="/t" className="text-green-700">
+                    See More
+                  </Link>
                 </span>
                 <AiOutlineArrowRight className="ml-1 text-green-700" />
               </div>
             </div>
-
           </div>
-          </motion.h2>
-        </div>
-     
+        </motion.h2>
+      </div>
     );
   } else {
     return (
@@ -120,7 +120,7 @@ export default function Activities() {
             variants={variants}
             transition={{ duration: 0.5 }}
           >
-            Our Activities
+            Our <b>Activities</b>
             <div className="absolute bottom left-1/2 transform -translate-x-1/2 translate-y-1/2 h-1 bg-green-500 w-20"></div>
           </motion.h2>
         </div>
