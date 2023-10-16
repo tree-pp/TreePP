@@ -18,7 +18,7 @@ interface treeProps {
 //     icon: string;
 //   }
 
-export default function TreeDetails(tree) {
+export default function TreeDetails(tree: treeProps) {
 	return (
 		console.log(tree),
 		(
