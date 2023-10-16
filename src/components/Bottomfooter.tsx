@@ -80,47 +80,47 @@ export default function Bottomfooter() {
           </Link>
         </div>
 
-        <div className="text-lg font-semibold uppercase tracking-widest text-white text-center flex-row">
-          Find us on:
-          <br />
-          <div className="font-light text-xs inline-flex border-b-2 transition duration-300 border-transparent hover:border-green-400">
-            <Link
-              href="https://opencollective.com/tree-pp"
-              className="flex items-center"
-            >
-              <CgOpenCollective className="mr-2" size="1rem" /> OpenCollective
-            </Link>
+          <div className="text-lg font-semibold uppercase tracking-widest text-white text-center flex-row">
+            Find us on:
+            <br />
+            <div className="font-light text-xs inline-flex border-b-2 transition duration-300 border-transparent hover:border-green-400">
+              <Link
+                href="https://opencollective.com/tree-pp"
+                className="flex items-center"
+              >
+                <CgOpenCollective className="mr-2" size="1rem" /> OpenCollective
+              </Link>
+            </div>
+            <br />
+            <div className="font-light text-xs inline-flex border-b-2 transition duration-300 border-transparent hover:border-green-400">
+              <Link
+                href="https://www.facebook.com/treepp.org"
+                className="flex items-center"
+              >
+                <FaFacebookF className="mr-2" size="1rem" /> Facebook
+              </Link>
+            </div>
+            <br />
+            <div className="font-light text-xs inline-flex border-b-2 transition duration-300 border-transparent hover:border-green-400">
+              {" "}
+              <Link
+                href="https://www.linkedin.com/company/tree-pp/"
+                className="flex items-center"
+              >
+                <FaLinkedinIn className="mr-2" size="1rem" /> LinkedIn
+              </Link>
+            </div>
+            <br />
+            <div className="font-light text-xs inline-flex border-b-2 transition duration-300 border-transparent hover:border-green-400">
+              <Link
+                href="https://github.com/tree-pp"
+                className="flex items-center"
+              >
+                <AiFillGithub className="mr-2" size="1rem" /> Github
+              </Link>
+            </div>
+            <br />
           </div>
-          <br />
-          <div className="font-light text-xs inline-flex border-b-2 transition duration-300 border-transparent hover:border-green-400">
-            <Link
-              href="https://www.facebook.com/treepp.org"
-              className="flex items-center"
-            >
-              <FaFacebookF className="mr-2" size="1rem" /> Facebook
-            </Link>
-          </div>
-          <br />
-          <div className="font-light text-xs inline-flex border-b-2 transition duration-300 border-transparent hover:border-green-400">
-            {" "}
-            <Link
-              href="https://www.linkedin.com/company/tree-pp/"
-              className="flex items-center"
-            >
-              <FaLinkedinIn className="mr-2" size="1rem" /> LinkedIn
-            </Link>
-          </div>
-          <br />
-          <div className="font-light text-xs inline-flex border-b-2 transition duration-300 border-transparent hover:border-green-400">
-            <Link
-              href="https://github.com/tree-pp"
-              className="flex items-center"
-            >
-              <AiFillGithub className="mr-2" size="1rem" /> Github
-            </Link>
-          </div>
-          <br />
-        </div>
 
         <div className="text-lg font-semibold uppercase tracking-widest text-white text-center">
           <h1 className="text-md">
@@ -170,8 +170,8 @@ export default function Bottomfooter() {
           </div>
         </div>
       </div> */}
-      <div className="flex md:flex-col pb-0 flex-row md:justify-start">
-        {/* <div className="flex-shrink-0">
+        <div className="flex md:flex-col pb-0 flex-row md:justify-start">
+          {/* <div className="flex-shrink-0">
           <Image
             src="/footer_1.png"
             alt=""
@@ -181,16 +181,16 @@ export default function Bottomfooter() {
             unoptimized
           />
         </div> */}
-        <div className=" items-center justify-center text-md text-slate-400 font-light text-center">
-          <div className="px-4 md:pt-8 md:pb-10 pt-5 pb-5 inline-flex">
-            <FaRegCopyright
-              className="pr-1.5 mb-2 mx-auto md:mx-0 md:mr-2 pt-1"
-              size="1.2rem"
-            />{" "}
-            2023 Tree++ | All rights reserved.
+          <div className=" items-center justify-center text-md text-slate-400 font-light text-center">
+            <div className="px-4 md:pt-8 md:pb-10 pt-5 pb-5 inline-flex">
+              <FaRegCopyright
+                className="pr-1.5 mb-2 mx-auto md:mx-0 md:mr-2 pt-1"
+                size="1.2rem"
+              />{" "}
+              2023 Tree++ | All rights reserved.
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </div>
   );
