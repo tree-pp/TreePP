@@ -1,15 +1,7 @@
-"use client";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import Link from "next/link";
 import { AiOutlineArrowRight } from "react-icons/ai";
-
-const imageStyle = {
-  borderRadius: "50%",
-  border: "1px solid #fff",
-};
 
 const imageStyle2 = {
   borderRadius: "1%", // border radius of the image
@@ -17,128 +9,89 @@ const imageStyle2 = {
 };
 
 const OurTeam = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-  });
-
-  const variants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
-
   return (
-    <div className="flex flex-col section-spacing " ref={ref}>
-      <motion.div className="flex flex-col justify-center items-center">
-        <motion.h1
-          className="head-text text-center"
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          variants={variants}
-          transition={{ duration: 0.5 }}
-        >
-          Our <b>Team</b>
-        </motion.h1>
-        <motion.p
-          className="h-1 bg-green-500 md:w-24 w-20 rounded-full"
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          variants={variants}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        ></motion.p>
-      </motion.div>
-      <motion.div
-        className="self-center flex-wrap mt-10 pb-5"
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-        variants={variants}
-        transition={{ duration: 0.5, delay: 0.3 }}
-      >
-        {/* For smaller screens */}
-        <div className="md:hidden flex flex-wrap">
-          <div className="w-full p-1 md:p-2">
-            <img
-              alt="gallery"
-              className="block h-full w-full rounded-lg object-cover object-center"
-              src="https://cdn.discordapp.com/attachments/742358259696140319/1163548019518607451/image2_landscape.jpg"
-            />
-          </div>
-          <div className="w-1/2 p-1 md:p-2">
-            <img
-              alt="gallery"
-              className="block h-full w-full rounded-lg object-cover object-center"
-              src="https://cdn.discordapp.com/attachments/742358259696140319/1163548720470700092/image3.jpeg"
-            />
-          </div>
-          <div className="w-1/2 p-1 md:p-2">
-            <img
-              alt="gallery"
-              className="block h-full w-full rounded-lg object-cover object-center"
-              src="https://cdn.discordapp.com/attachments/742358259696140319/1163549652331810963/image1.jpeg"
-            />
-          </div>
+    <div className="flex flex-col section-spacing ">
+      <div className="flex flex-col justify-center items-center">
+        <h1 className="head-text text-center">Our <b>Team</b></h1>
+        <p className="h-1 bg-green-500 md:w-24 w-20 rounded-full"></p>
+      </div>
+      {/* For smaller screens */}
+      <div className="md:hidden flex flex-wrap">
+        <div className="w-full p-1 md:p-2">
+          <img
+            alt="gallery"
+            className="block h-full w-full rounded-lg object-cover object-center"
+            src="https://cdn.discordapp.com/attachments/742358259696140319/1163548019518607451/image2_landscape.jpg"
+          />
         </div>
-        {/* For larger screens */}
-        <div className="hidden md:block container mx-auto md:pt-10 pt-5">
-          <div className="-m-1 flex flex-wrap md:-m-2">
-            <div className="flex w-1/2 flex-wrap">
-              <div className="w-1/2 p-1 md:p-2">
-                <img
-                  alt="gallery"
-                  className="block h-full w-full rounded-lg object-cover object-center"
-                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp"
-                />
-              </div>
-              <div className="w-1/2 p-1 md:p-2">
-                <img
-                  alt="gallery"
-                  className="block h-full w-full rounded-lg object-cover object-center"
-                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp"
-                />
-              </div>
-              <div className="w-full p-1 md:p-2">
-                <img
-                  alt="gallery"
-                  className="block h-full w-full rounded-lg object-cover object-center"
-                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-                />
-              </div>
+        <div className="w-1/2 p-1 md:p-2">
+          <img
+            alt="gallery"
+            className="block h-full w-full rounded-lg object-cover object-center"
+            src="https://cdn.discordapp.com/attachments/742358259696140319/1163548720470700092/image3.jpeg"
+          />
+        </div>
+        <div className="w-1/2 p-1 md:p-2">
+          <img
+            alt="gallery"
+            className="block h-full w-full rounded-lg object-cover object-center"
+            src="https://cdn.discordapp.com/attachments/742358259696140319/1163549652331810963/image1.jpeg"
+          />
+        </div>
+      </div>
+      {/* For larger screens */}
+      <div className="hidden md:block container mx-auto md:pt-10 pt-5">
+        <div className="-m-1 flex flex-wrap md:-m-2">
+          <div className="flex w-1/2 flex-wrap">
+            <div className="w-1/2 p-1 md:p-2">
+              <img
+                alt="gallery"
+                className="block h-full w-full rounded-lg object-cover object-center"
+                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp"
+              />
             </div>
-            <div className="flex w-1/2 flex-wrap">
-              <div className="w-full p-1 md:p-2">
-                <img
-                  alt="gallery"
-                  className="block h-full w-full rounded-lg object-cover object-center"
-                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp"
-                />
-              </div>
-              <div className="w-1/2 p-1 md:p-2">
-                <img
-                  alt="gallery"
-                  className="block h-full w-full rounded-lg object-cover object-center"
-                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp"
-                />
-              </div>
-              <div className="w-1/2 p-1 md:p-2">
-                <img
-                  alt="gallery"
-                  className="block h-full w-full rounded-lg object-cover object-center"
-                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(77).webp"
-                />
-              </div>
+            <div className="w-1/2 p-1 md:p-2">
+              <img
+                alt="gallery"
+                className="block h-full w-full rounded-lg object-cover object-center"
+                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp"
+              />
+            </div>
+            <div className="w-full p-1 md:p-2">
+              <img
+                alt="gallery"
+                className="block h-full w-full rounded-lg object-cover object-center"
+                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+              />
+            </div>
+          </div>
+          <div className="flex w-1/2 flex-wrap">
+            <div className="w-full p-1 md:p-2">
+              <img
+                alt="gallery"
+                className="block h-full w-full rounded-lg object-cover object-center"
+                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp"
+              />
+            </div>
+            <div className="w-1/2 p-1 md:p-2">
+              <img
+                alt="gallery"
+                className="block h-full w-full rounded-lg object-cover object-center"
+                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp"
+              />
+            </div>
+            <div className="w-1/2 p-1 md:p-2">
+              <img
+                alt="gallery"
+                className="block h-full w-full rounded-lg object-cover object-center"
+                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(77).webp"
+              />
             </div>
           </div>
         </div>
-      </motion.div>
-      {/* <motion.p
-        className="pt-10 flex justify-center items-center uppercase tracking-wide text-black md:text-xl text-sm font-light border-b-2 transition duration-300 border-transparent hover:border-green-500"
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-        variants={variants}
-        transition={{ duration: 0.5, delay: 0.5 }}
-      >
-        <Link href="/about">Learn More</Link>
-        <AiOutlineArrowRight className="ml-1" />
-      </motion.p> */}
+      </div>
+      {/* <Link href="/about">Learn More</Link>
+        <AiOutlineArrowRight className="ml-1" /> */}
     </div>
   );
 };
