@@ -125,43 +125,9 @@ export default function Activities() {
           </motion.h2>
         </div>
         <div className="mx-auto pl-5 pr-5 w-2xl my-5 text-slate-700">
-          <motion.h6
-            className="sub-head-text inline relative "
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={variants}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            Pilot 3
-          </motion.h6>
-          <div className="border-t-2 border-black  border-solid h-4  my-2 "></div>
-          <div className="text-slate-700 flex-col justify-center items-center">
-            <motion.p
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
-              variants={variants}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              <b>Location: </b> Khulna Govt. Girls School, Khulna
-            </motion.p>
-            <motion.p
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
-              variants={variants}
-              transition={{ duration: 0.5, delay: 0.6 }}
-            >
-              Some more text
-            </motion.p>
-            <motion.p
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
-              variants={variants}
-              transition={{ duration: 0.5, delay: 0.8 }}
-            >
-              Even more text
-            </motion.p>
-          </div>
-          <div className="flex flex-col md:flex-row gap-x-5 gap-y-5 my-5 pl-2.5 pb-5 justify-center items-center">
+          
+          
+          <div className="flex flex-col md:flex-row gap-x-5 gap-y-5 my-5 pl-2.5 pb-5 pt-5 justify-center items-center">
             {" "}
             {/* Center align */}
             <div className="flex flex-row flex-wrap gap-3">
