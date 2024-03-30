@@ -3,6 +3,8 @@ import React from 'react';
 import Link from 'next/link';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 
+const azureURL = 'https://treepp.blob.core.windows.net/website/';
+
 const imageStyle2 = {
 	borderRadius: '1%', // border radius of the image
 	border: '1px solid #fff' // change the #fff to #000 to see the border
@@ -23,28 +25,36 @@ const OurTeam = () => {
 					<img
 						alt='gallery'
 						className='block h-full w-full rounded-lg object-cover object-center'
-						src='https://cdn.discordapp.com/attachments/742358259696140319/1163548019518607451/image2_landscape.jpg'
+						// src='https://cdn.discordapp.com/attachments/742358259696140319/1163548019518607451/image2_landscape.jpg'
+						src={azureURL + '1.webp'}
 					/>
 				</div>
 				<div className='w-1/2 p-1 md:p-2'>
 					<img
 						alt='gallery'
 						className='block h-full w-full rounded-lg object-cover object-center'
-						src='https://cdn.discordapp.com/attachments/742358259696140319/1163548720470700092/image3.jpeg'
+						src={azureURL + '2.webp'}
 					/>
 				</div>
 				<div className='w-1/2 p-1 md:p-2'>
 					<img
 						alt='gallery'
 						className='block h-full w-full rounded-lg object-cover object-center'
-						src='https://cdn.discordapp.com/attachments/742358259696140319/1163549652331810963/image1.jpeg'
+						src={azureURL + '5.webp'}
 					/>
 				</div>
 				<div className='w-1/2 p-1 md:p-2'>
 					<img
 						alt='gallery'
 						className='block h-full w-full rounded-lg object-cover object-center'
-						src='https://cdn.discordapp.com/attachments/742358259696140319/1163549652331810963/image1.jpeg'
+						src={azureURL + '4.webp'}
+					/>
+				</div>
+				<div className='w-1/2 p-1 md:p-2'>
+					<img
+						alt='gallery'
+						className='block h-full w-full rounded-lg object-cover object-center'
+						src={azureURL + '3.webp'}
 					/>
 				</div>
 			</div>
@@ -56,21 +66,21 @@ const OurTeam = () => {
 							<img
 								alt='gallery'
 								className='block h-full w-full rounded-lg object-cover object-center'
-								src='https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp'
+								src={azureURL + '2.webp'}
 							/>
 						</div>
 						<div className='w-1/2 p-1 md:p-2'>
 							<img
 								alt='gallery'
 								className='block h-full w-full rounded-lg object-cover object-center'
-								src='https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp'
+								src={azureURL + '4.webp'}
 							/>
 						</div>
 						<div className='w-full p-1 md:p-2'>
 							<img
 								alt='gallery'
 								className='block h-full w-full rounded-lg object-cover object-center'
-								src='https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp'
+								src={azureURL + '1.webp'}
 							/>
 						</div>
 					</div>
@@ -79,21 +89,21 @@ const OurTeam = () => {
 							<img
 								alt='gallery'
 								className='block h-full w-full rounded-lg object-cover object-center'
-								src='https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp'
+								src={azureURL + '3.webp'}
 							/>
 						</div>
 						<div className='w-1/2 p-1 md:p-2'>
 							<img
 								alt='gallery'
 								className='block h-full w-full rounded-lg object-cover object-center'
-								src='https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp'
+								src={azureURL + '5.webp'}
 							/>
 						</div>
 						<div className='w-1/2 p-1 md:p-2'>
 							<img
 								alt='gallery'
 								className='block h-full w-full rounded-lg object-cover object-center'
-								src='https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(77).webp'
+								src={azureURL + '6.webp'}
 							/>
 						</div>
 					</div>
