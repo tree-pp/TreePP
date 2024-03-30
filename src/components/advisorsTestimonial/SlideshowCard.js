@@ -7,28 +7,46 @@ import SSCards from './SSCards';
 
 const cardData = [
 	{
-		src: 'https://media.licdn.com/dms/image/D4D03AQGuSjG2_tYlxQ/profile-displayphoto-shrink_400_400/0/1668714950341?e=1702512000&v=beta&t=ZC635ZFJK8RCtnfL46-nkKB4c7zR04jUL1NYIZ7HSTE',
-		name: 'Firstname Lastname',
+		src: '/adv-kma.jpg',
+		name: 'Kazi Masudul Alam, PhD',
+		designation: 'Professor of CSE at Khulna University',
 		quote:
-			'Tree++ is a very nice initiative. I am very happy to be a part of it. I stayed with them since their beginning.'
+			"As an technical professional passionate about environmental sustainability, I'm impressed by the vision of Tree++. Their innovative use of technology to facilitate tree planting and carbon offsetting is a testament to the power of digital solutions in addressing global challenges. I'm excited to collaborate with the team and leverage ICT tools to maximize the impact of their initiatives"
 	},
 	{
-		src: 'https://media.licdn.com/dms/image/D5603AQH6oA8v7uez3A/profile-displayphoto-shrink_100_100/0/1676816043087?e=1702512000&v=beta&t=NVxXY-dUQLdXSJTeaZikEKt-bPhC7rdjPuhVOE83HY8',
-		name: 'Oldname Newname',
+		src: '/adv-ssr.png',
+		name: 'Sana Shaminur Rahman',
+		designation: 'Additional DIG of Bangladesh Police',
 		quote:
-			'Tree++ is a very nice initiative. I like it. I stayed with them since their beginning.'
+			"Tree++ offers a game-changing solution to combat climate change through tree planting and carbon offsetting. Their digital platform empowers individuals and organizations to take meaningful action towards a greener future. I'm proud to support their mission and encourage others to join the movement."
 	},
 	{
-		src: 'https://media.licdn.com/dms/image/C4D03AQFM3Y2r-OEStw/profile-displayphoto-shrink_100_100/0/1515623804434?e=1702512000&v=beta&t=FRAA29d66Nj5i7qsL-JNlyZYfWDOMx9UPtzDfKE38wI',
-		name: 'Name1 Name2',
+		src: '/adv-kr.png',
+		name: 'Kaiser Rashid',
+		designation: 'Director (ret.) of Bridge Board Authority',
 		quote:
-			'Tree++ is a very nice initiative. I want it. I stayed with them since their beginning.'
+			'As a retiree with a lifelong dedication to public service, I am delighted to witness initiatives like Tree++ emerge in the fight against climate change. Having worked within government, I understand the challenges we face in addressing such complex issues. Tree++ offers a refreshing approach, leveraging technology and community engagement to make a tangible difference. I offer my full support to this worthy cause and encourage others to join in preserving our planet for future generations'
 	},
 	{
-		src: 'https://media.licdn.com/dms/image/C5603AQGBG-pWCdQcIA/profile-displayphoto-shrink_100_100/0/1520369865349?e=1702512000&v=beta&t=vPRY77uHungePGWW6eudRQv2AS_-9jgnHjheH4n5GlE',
-		name: 'Your Name',
+		src: '/adv-tfa.png',
+		name: 'Tanzeen Ferdous Alam',
+		designation: 'CMO of Berger Paints Bangladesh',
 		quote:
-			'Tree++ is a very nice initiative. Text, more text even more text and many more text. I love it. I stayed with them since their beginning.'
+			"As a representative of a multinational corporation committed to corporate social responsibility, I am impressed by the initiative shown by Tree++. Their digital platform not only provides a practical solution for carbon offsetting but also aligns with our company's sustainability goals. We see great potential in partnering with Tree++ to support their efforts and make a meaningful impact on combating climate change"
+	},
+	{
+		src: '/adv-ni.png',
+		name: 'Nazrul Islam',
+		designation: 'Deputy Country Director of Relief Internation',
+		quote:
+			"As an advocate for environmental sustainability within the NGO sector, I'm thrilled to see the launch of Tree++. Their innovative platform offers a practical and accessible solution for individuals and communities to contribute to carbon offsetting and tree planting efforts. I wholeheartedly support their mission and look forward to collaborating with Tree++ to amplify our impact and create positive change for our planet."
+	},
+	{
+		src: '/adv-fa.png',
+		name: 'Dr. Ferdousi Akter',
+		designation: 'Deputy Director, Director of Health Office, Khulna ',
+		quote:
+			'As a representative of the government, I commend the Tree++ team for their proactive approach to environmental conservation. Their digital platform not only aligns with our climate action goals but also fosters community engagement and empowerment. I encourage citizens to embrace this initiative as we work together towards a more sustainable future for our planet.'
 	}
 ];
 
