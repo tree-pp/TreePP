@@ -31,7 +31,7 @@ export default function SSCards({ isEntering, cardData, currentCard }) {
 							isEntering ? 'opacity-100' : 'opacity-0'
 						}`}
 					>
-						Big guy at big company
+						{cardData[currentCard].designation}
 					</p>
 				</div>
 			</div>
