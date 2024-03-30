@@ -6,12 +6,29 @@
 		"start": "next start"
 	},
 	"dependencies": {
-		"@emotion/react": "^11.10.6",
-		"@emotion/styled": "^11.10.6",
-		"@mui/icons-material": "^5.11.16",
-		"@mui/material": "^5.11.16",
-		"next": "latest",
+		"@fortawesome/fontawesome-svg-core": "^6.4.0",
+		"@fortawesome/free-solid-svg-icons": "^6.4.0",
+		"@fortawesome/react-fontawesome": "^0.2.0",
+		"@heroicons/react": "^2.0.18",
+		"@material-tailwind/html": "^2.0.0",
+		"@material-tailwind/react": "^2.1.0",
+		"@types/node": "20.4.2",
+		"@types/react": "18.2.15",
+		"@types/react-dom": "18.2.7",
+		"autoprefixer": "^10.4.15",
+		"eslint": "8.45.0",
+		"eslint-config-next": "13.4.10",
+		"framer-motion": "^10.16.1",
+		"hamburger-react": "^2.5.0",
+		"next": "^13.4.10",
 		"react": "18.2.0",
-		"react-dom": "18.2.0"
+		"react-dom": "18.2.0",
+		"react-icons": "^4.10.1",
+		"react-intersection-observer": "^9.5.2",
+		"tailwindcss": "3.3.3",
+		"typescript": "5.1.6"
+	},
+	"devDependencies": {
+		"@tailwindcss/aspect-ratio": "^0.4.2"
 	}
 }
