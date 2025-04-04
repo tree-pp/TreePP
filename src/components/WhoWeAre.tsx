@@ -23,9 +23,9 @@ const WhoWeAre = () => {
 					them responsible for it. A team of technologists, environmental
 					advocates and everyday changemakers who believe that fighting climate
 					change should be accessible to everyone. By combining cutting edge
-					technology and nature-based solutions, we’re building an ecosystem
-					that empowers individuals and organizations to understand, reduce and
-					offset their carbon footprint.
+					technology and nature-based solutions, we&apos;re building an
+					ecosystem that empowers individuals and organizations to understand,
+					reduce and offset their carbon footprint.
 				</p>
 			</div>
 			<p className='md:w-1/2 pt-10 md:pt-0 md:flex md:justify-end md:order-2'>
