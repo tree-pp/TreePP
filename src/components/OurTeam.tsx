@@ -3,7 +3,9 @@ import React from 'react';
 import Link from 'next/link';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 
-const azureURL = 'https://treepp.blob.core.windows.net/website/';
+// const azureURLx = 'https://treepp.blob.core.windows.net/website/';
+const s3URL =
+	'https://util-pub.s3.eu-north-1.amazonaws.com/Tree%2B%2B/website-trepp.org/';
 
 const imageStyle2 = {
 	borderRadius: '1%', // border radius of the image
@@ -25,36 +27,35 @@ const OurTeam = () => {
 					<img
 						alt='gallery'
 						className='block h-full w-full rounded-lg object-cover object-center'
-						// src='https://cdn.discordapp.com/attachments/742358259696140319/1163548019518607451/image2_landscape.jpg'
-						src={azureURL + '1.webp'}
+						src={s3URL + '1.webp'}
 					/>
 				</div>
 				<div className='w-1/2 p-1 md:p-2'>
 					<img
 						alt='gallery'
 						className='block h-full w-full rounded-lg object-cover object-center'
-						src={azureURL + '2.webp'}
+						src={s3URL + '2.webp'}
 					/>
 				</div>
 				<div className='w-1/2 p-1 md:p-2'>
 					<img
 						alt='gallery'
 						className='block h-full w-full rounded-lg object-cover object-center'
-						src={azureURL + '5.webp'}
+						src={s3URL + '5.webp'}
 					/>
 				</div>
 				<div className='w-1/2 p-1 md:p-2'>
 					<img
 						alt='gallery'
 						className='block h-full w-full rounded-lg object-cover object-center'
-						src={azureURL + '4.webp'}
+						src={s3URL + '4.webp'}
 					/>
 				</div>
 				<div className='w-1/2 p-1 md:p-2'>
 					<img
 						alt='gallery'
 						className='block h-full w-full rounded-lg object-cover object-center'
-						src={azureURL + '3.webp'}
+						src={s3URL + '3.webp'}
 					/>
 				</div>
 			</div>
@@ -66,21 +67,21 @@ const OurTeam = () => {
 							<img
 								alt='gallery'
 								className='block h-full w-full rounded-lg object-cover object-center'
-								src={azureURL + '2.webp'}
+								src={s3URL + '2.webp'}
 							/>
 						</div>
 						<div className='w-1/2 p-1 md:p-2'>
 							<img
 								alt='gallery'
 								className='block h-full w-full rounded-lg object-cover object-center'
-								src={azureURL + '4.webp'}
+								src={s3URL + '4.webp'}
 							/>
 						</div>
 						<div className='w-full p-1 md:p-2'>
 							<img
 								alt='gallery'
 								className='block h-full w-full rounded-lg object-cover object-center'
-								src={azureURL + '1.webp'}
+								src={s3URL + '1.webp'}
 							/>
 						</div>
 					</div>
@@ -89,21 +90,21 @@ const OurTeam = () => {
 							<img
 								alt='gallery'
 								className='block h-full w-full rounded-lg object-cover object-center'
-								src={azureURL + '3.webp'}
+								src={s3URL + '3.webp'}
 							/>
 						</div>
 						<div className='w-1/2 p-1 md:p-2'>
 							<img
 								alt='gallery'
 								className='block h-full w-full rounded-lg object-cover object-center'
-								src={azureURL + '5.webp'}
+								src={s3URL + '5.webp'}
 							/>
 						</div>
 						<div className='w-1/2 p-1 md:p-2'>
 							<img
 								alt='gallery'
 								className='block h-full w-full rounded-lg object-cover object-center'
-								src={azureURL + '6.webp'}
+								src={s3URL + '6.webp'}
 							/>
 						</div>
 					</div>
