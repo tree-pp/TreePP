@@ -20,13 +20,13 @@ const HowItWorks = () => {
 					At the core of Tree++ is a powerful digital platform that includes an
 					AI-powered open-source carbon footprint calculator, a smart carbon
 					offsetting engine and a sustainable marketplace. <br /> With the end
-					user application users can measure your carbon footprint, whether it's
-					a product, service or activity, simply like scanning a QR code. After
-					measureing the carbon footprint, Tree++ prompts users to offset it
-					fully or partially by connecting the offsetting request to right land
-					and volunteers in the field. Tree++ allows the users to check the
-					status of the trees they plant through it's built in monitoring and
-					tracking system. <br />
+					user application users can measure your carbon footprint, whether
+					it&apos;s a product, service or activity, simply like scanning a QR
+					code. After measureing the carbon footprint, Tree++ prompts users to
+					offset it fully or partially by connecting the offsetting request to
+					right land and volunteers in the field. Tree++ allows the users to
+					check the status of the trees they plant through it&apos;s built in
+					monitoring and tracking system. <br />
 					The ecosystem keeps users engaged by rewarding them one Tree++ coin on
 					each tree they plants and the users can redeem these coins to purchase
 					from the Tree++ marketplace where our partners merchants sell

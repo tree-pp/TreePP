@@ -18,7 +18,7 @@ const WhoWeAre = () => {
 				</h1>
 				<p className='tracking-normal md:mt-10 mt-5 paragraph-text'>
 					Tree++ (Tree Plus Plus) is your gateway to sustainable lifestyle.
-					We're a ClimateTech initiative working on a mission to make every
+					We&apos;re a ClimateTech initiative working on a mission to make every
 					single person in the planet aware of their carbon footprint and make
 					them responsible for it. A team of technologists, environmental
 					advocates and everyday changemakers who believe that fighting climate
