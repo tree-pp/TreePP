@@ -14,6 +14,11 @@ import {
 import { CgOpenCollective } from 'react-icons/cg';
 import { AiFillGithub } from 'react-icons/ai';
 
+const getCurrentYear = () => {
+	const d = new Date();
+	return d.getFullYear();
+};
+
 export default function Bottomfooter() {
 	return (
 		<div className='bg-slate-900 text-white'>
@@ -187,7 +192,7 @@ export default function Bottomfooter() {
 								className='pr-1.5 mb-2 mx-auto md:mx-0 md:mr-2 pt-1'
 								size='1.2rem'
 							/>{' '}
-							2024 Tree++ | All rights reserved.
+							{getCurrentYear()} Tree++ | All rights reserved.
 						</div>
 					</div>
 				</div>

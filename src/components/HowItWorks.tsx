@@ -17,15 +17,20 @@ const HowItWorks = () => {
 					<div className='absolute bottom-0 left-0 w-1/2 h-1 bg-green-500 transform rounded-lg translate-y-1'></div>
 				</h1>
 				<p className='tracking-normal md:mt-10 mt-5 paragraph-text'>
-					Tree++ aims to achieve net zero by offering carbon offsetting through
-					tree plantation. Individuals can calculate their carbon footprint and
-					purchase carbon offsets on the digital platform. Landowners with
-					unused plantation-ready lands can enlist them on the same platform.
-					Tree++ provides a unique opportunity for youth to actively participate
-					in the green movement, receiving incentives for their efforts.
-					Corporations of any size can offset their carbon emissions effectively
-					through Tree++. This novel platform connects all stakeholders involved
-					in carbon offsetting through tree plantation in a win-win-win manner.
+					At the core of Tree++ is a powerful digital platform that includes an
+					AI-powered open-source carbon footprint calculator, a smart carbon
+					offsetting engine and a sustainable marketplace. <br /> With the end
+					user application users can measure your carbon footprint, whether
+					it&apos;s a product, service or activity, simply like scanning a QR
+					code. After measureing the carbon footprint, Tree++ prompts users to
+					offset it fully or partially by connecting the offsetting request to
+					right land and volunteers in the field. Tree++ allows the users to
+					check the status of the trees they plant through it&apos;s built in
+					monitoring and tracking system. <br />
+					The ecosystem keeps users engaged by rewarding them one Tree++ coin on
+					each tree they plants and the users can redeem these coins to purchase
+					from the Tree++ marketplace where our partners merchants sell
+					eco-friendly and sustainable products and services.
 				</p>
 			</div>
 			<p className='md:w-1/2 pt-10 md:pt-0 md:flex md:justify-end md:order-2'>

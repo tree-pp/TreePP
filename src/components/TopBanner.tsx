@@ -14,15 +14,14 @@ const TopBanner = () => {
 					alt='Tree++ Mobile Top Banner'
 				/>
 				<div className='absolute top-12 md:left-0 md:transform text-center md:text-left md:translate-x-24 z-10 flex flex-col items-center'>
-					<div className='tracking-tighter leading-[0.8] text-black uppercase'>
+					<div className='tracking-widest leading-[0.8] text-black'>
 						<div className='inline-block font-extrabold text-4xl text-green-600'>
 							Tree{' '}
 						</div>{' '}
 						<div className='inline-block text-4xl font-thin'>Plus Plus</div>
 					</div>
-					<div className='mt-2 text-center text-2xl leading-6 text-slate-600'>
-						<div className='inline-block'>Healing the environment</div>{' '}
-						<div className='inline-block font-light'> One tree at a time</div>
+					<div className='mt-2 tracking-wide text-center text-2xl leading-6 text-slate-600'>
+						<div className='inline-block'>Turning Emission into Actions </div>
 					</div>
 				</div>
 			</div>
@@ -35,15 +34,14 @@ const TopBanner = () => {
 					alt='Tree++ Top Banner'
 				/>
 				<div className='md:absolute md:top-1/4 md:left-0 md:transform text-center md:text-left md:translate-x-24 z-10 flex flex-col items-center'>
-					<div className='tracking-tighter leading-[0.8] text-black text-7xl uppercase'>
+					<div className='tracking-wider leading-[0.8] text-black text-7xl '>
 						<div className='inline-block font-extrabold text-green-600'>
 							Tree{' '}
 						</div>{' '}
 						<div className='inline-block font-light'>Plus Plus</div>
 					</div>
-					<div className='font-thin tracking-tight text-center text-3xl text-slate-600'>
-						<div className='inline-block'>Healing the environment, </div>{' '}
-						<div className='inline-block'>one tree at a time</div>
+					<div className='font-thin tracking-widest text-center text-3xl text-slate-600'>
+						<div className='inline-block'>Turning Emission into Actions </div>
 					</div>
 				</div>
 			</div>

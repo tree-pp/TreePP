@@ -17,11 +17,15 @@ const WhoWeAre = () => {
 					<div className='absolute bottom-0 left-0 w-1/2 h-1 bg-green-500 transform rounded-lg translate-y-1'></div>
 				</h1>
 				<p className='tracking-normal md:mt-10 mt-5 paragraph-text'>
-					As a volunteer-driven non-profit, we are passionate about making a
-					positive impact on the environment through tree plantation
-					initiatives. Together, we strive to create a greener future by
-					planting trees, raising awareness about their importance, and
-					fostering a sense of environmental stewardship within our communities.
+					Tree++ (Tree Plus Plus) is your gateway to sustainable lifestyle.
+					We&apos;re a ClimateTech initiative working on a mission to make every
+					single person in the planet aware of their carbon footprint and make
+					them responsible for it. A team of technologists, environmental
+					advocates and everyday changemakers who believe that fighting climate
+					change should be accessible to everyone. By combining cutting edge
+					technology and nature-based solutions, we&apos;re building an
+					ecosystem that empowers individuals and organizations to understand,
+					reduce and offset their carbon footprint.
 				</p>
 			</div>
 			<p className='md:w-1/2 pt-10 md:pt-0 md:flex md:justify-end md:order-2'>

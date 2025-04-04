@@ -19,12 +19,12 @@ const WhatWeDo = () => {
 					<div className='absolute bottom-0 left-0 w-1/2 h-1 bg-green-500 transform rounded-lg translate-y-1'></div>
 				</h1>
 				<p className='tracking-normal md:mt-10 mt-5 paragraph-text'>
-					At Tree++, we lead the charge towards a sustainable future by offering
-					carbon offsetting through tree plantation. Our digital platform
-					empowers individuals to calculate and purchase carbon offsets, while
-					providing landowners a way to contribute to reforestation efforts. For
-					the youth, Tree++ presents a unique opportunity to actively engage in
-					the green movement and be incentivized for their efforts.
+					Tree++ offers individuals and businesses to take real climate action.
+					Through our digital platform, users can instantly measure their carbon
+					emissions, offset them by planting trees and get rewarded for their
+					efforts. At the same time, we connect sustainable product merchants,
+					volunteers and landowners into a single ecosystem that powers
+					collective impact and builds a regenerative future.
 				</p>
 				<div className='md:mt-10 mt-5 flex justify-end'>
 					<p className='flex items-center uppercase tracking-wide text-black md:text-xl text-sm font-light border-b-2 transition duration-300 border-transparent hover:border-green-500'>
