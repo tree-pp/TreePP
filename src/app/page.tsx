@@ -12,20 +12,9 @@ import OurTeam from '@/components/OurTeam';
 import OurGoals from '@/components/OurGoals';
 import SlideshowCard from '@/components/advisorsTestimonial/SlideshowCard';
 
-// const theme = createTheme();
-// const sections = [
-//   { title: "What is Tree++", url: "#" },
-//   { title: "How it Works", url: "#" },
-//   { title: "Recent Activities", url: "#" },
-//   { title: "Contribute", url: "#" },
-//   { title: "Team", url: "#" },
-//   { title: "Donors", url: "#" },
-//   { title: "Partners", url: "#" },
-// ];
+import { website_metadata } from '../const';
 
-export const metadata: Metadata = {
-	title: 'Tree++ | Technology Enabled Nature Based Carbon Offsetting Platform'
-};
+export const metadata: Metadata = website_metadata;
 
 export default function Home() {
 	return (
