@@ -268,6 +268,33 @@ const JoinPage = () => {
             </div>
           ))}
         </div>
+
+        {/* Newsletter Section */}
+        <div className="mt-16 text-center">
+          <div className="bg-gray-50 rounded-lg p-6">
+            <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+              Don&apos;t want to join, but stay updated with what Tree++ is
+              doing? Subscribe to our newsletter.{' '}
+              <span className="italic">
+                The newsletter sends at most one email in every three months. No
+                worries, no spam!
+              </span>
+            </p>
+            <div className="flex flex-col sm:flex-row gap-2 max-w-sm mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900 placeholder-gray-500 text-sm"
+              />
+              <button
+                type="button"
+                className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-md transition-colors duration-300 uppercase tracking-wide text-xs whitespace-nowrap"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Modals */}
