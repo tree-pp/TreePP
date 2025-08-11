@@ -11,13 +11,44 @@ import {
   FaExclamationTriangle,
 } from 'react-icons/fa';
 import {
-  JoinFormData,
-  FormField,
-  JoinFormBlock,
   CreateJoinRequestDto,
   ApiResponse,
   JoinRequest,
 } from '@tree-pp/shared-types';
+
+// Local interfaces for form-specific types that aren't in the shared package
+interface JoinFormData {
+  name: string;
+  email: string;
+  trees?: string;
+  location?: string;
+  landLocation?: string;
+  landSize?: string;
+  preferredTrees?: string;
+  notes?: string;
+  volunteerLocation?: string;
+  availableDates?: string;
+  skills?: string;
+  howToHelp?: string;
+}
+
+interface FormField {
+  name: string;
+  label: string;
+  type: 'text' | 'email' | 'number' | 'textarea';
+  required: boolean;
+}
+
+interface JoinFormBlock {
+  id: string;
+  title: string;
+  description: string;
+  buttonText: string;
+  icon: any; // React icon component
+  modalTitle: string;
+  fields: FormField[];
+  backendType: 'offsetter' | 'land_provider' | 'volunteer' | 'contributor';
+}
 
 interface FormErrors {
   [key: string]: string;
@@ -109,8 +140,7 @@ const transformFormDataToAPI = (
   formData: JoinFormData,
   backendType: string
 ): CreateJoinRequestDto => {
-  const baseData: CreateJoinRequestDto = {
-    type: backendType as any,
+  const baseData = {
     name: formData.name,
     email: formData.email,
   };
@@ -119,39 +149,43 @@ const transformFormDataToAPI = (
     case 'offsetter':
       return {
         ...baseData,
+        type: 'offsetter',
         offsetter: {
           numberOfTrees: parseInt(formData.trees || '0'),
           location: formData.location || '',
         },
-      };
+      } as CreateJoinRequestDto;
     case 'land_provider':
       return {
         ...baseData,
+        type: 'land_provider',
         landProvider: {
           landLocation: formData.landLocation || '',
           landSize: formData.landSize || '',
           preferredTrees: formData.preferredTrees || '',
           notes: formData.notes || '',
         },
-      };
+      } as CreateJoinRequestDto;
     case 'volunteer':
       return {
         ...baseData,
+        type: 'volunteer',
         volunteer: {
           volunteerLocation: formData.volunteerLocation || '',
           availableDates: formData.availableDates || '',
         },
-      };
+      } as CreateJoinRequestDto;
     case 'contributor':
       return {
         ...baseData,
+        type: 'contributor',
         contributor: {
           skills: formData.skills || '',
           howToHelp: formData.howToHelp || '',
         },
-      };
+      } as CreateJoinRequestDto;
     default:
-      return baseData;
+      throw new Error(`Unknown backend type: ${backendType}`);
   }
 };
 
@@ -265,7 +299,7 @@ const JoinPage = () => {
           });
         }, 3000);
       } else {
-        throw new Error(response.data.message || 'Submission failed');
+        throw new Error(response.data.error?.message || 'Submission failed');
       }
     } catch (error: any) {
       setIsSubmitting(false);
