@@ -62,7 +62,8 @@ interface ModalProps {
 }
 
 // API configuration
-const API_BASE_URL = process.env.BASE_URL || 'http://localhost:4000';
+// const API_BASE_URL = process.env.BASE_URL || 'http://localhost:4000';
+const API_BASE_URL = process.env.BASE_URL || 'https://api.treepp.org';
 
 // Validation functions
 const validateEmail = (email: string): string | null => {
