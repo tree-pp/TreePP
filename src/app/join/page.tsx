@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import axios from 'axios';
 import {
   FaTree,
   FaMapMarkedAlt,
@@ -7,11 +8,18 @@ import {
   FaHeart,
   FaTimes,
   FaCheck,
+  FaExclamationTriangle,
 } from 'react-icons/fa';
+import {
+  JoinFormData,
+  FormField,
+  JoinFormBlock,
+  CreateJoinRequestDto,
+  ApiResponse,
+  JoinRequest,
+} from '@tree-pp/shared-types';
 
-interface FormData {
-  name: string;
-  email: string;
+interface FormErrors {
   [key: string]: string;
 }
 
@@ -21,6 +29,131 @@ interface ModalProps {
   title: string;
   children: React.ReactNode;
 }
+
+// API configuration
+const API_BASE_URL = process.env.BASE_URL || 'http://localhost:4000';
+
+// Validation functions
+const validateEmail = (email: string): string | null => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!email) return 'Email is required';
+  if (!emailRegex.test(email)) return 'Please enter a valid email address';
+  return null;
+};
+
+const validateRequired = (value: string, fieldName: string): string | null => {
+  if (!value || value.trim() === '') {
+    return `${fieldName} is required`;
+  }
+  return null;
+};
+
+const validateNumber = (value: string, fieldName: string): string | null => {
+  if (!value) return `${fieldName} is required`;
+  const num = parseInt(value);
+  if (isNaN(num) || num <= 0) return `${fieldName} must be a positive number`;
+  return null;
+};
+
+const validateForm = (data: JoinFormData, fields: FormField[]): FormErrors => {
+  const errors: FormErrors = {};
+
+  fields.forEach((field) => {
+    const value = data[field.name as keyof JoinFormData] || '';
+
+    if (field.required) {
+      const requiredError = validateRequired(value, field.label);
+      if (requiredError) {
+        errors[field.name] = requiredError;
+        return;
+      }
+    }
+
+    if (field.type === 'email' && value) {
+      const emailError = validateEmail(value);
+      if (emailError) {
+        errors[field.name] = emailError;
+        return;
+      }
+    }
+
+    if (field.type === 'number' && value) {
+      const numberError = validateNumber(value, field.label);
+      if (numberError) {
+        errors[field.name] = numberError;
+        return;
+      }
+    }
+
+    // Custom validation for specific fields
+    if (field.name === 'trees' && value) {
+      const num = parseInt(value);
+      if (num > 1000) {
+        errors[field.name] = 'Maximum 1000 trees can be planted at once';
+      }
+    }
+
+    if (field.name === 'landSize' && value) {
+      if (!/^\d+(\.\d+)?\s*(acres?|hectares?|ha|ac)$/i.test(value)) {
+        errors[field.name] =
+          'Please specify size with unit (e.g., "5 acres" or "2 hectares")';
+      }
+    }
+  });
+
+  return errors;
+};
+
+// Helper function to transform form data to API format
+const transformFormDataToAPI = (
+  formData: JoinFormData,
+  backendType: string
+): CreateJoinRequestDto => {
+  const baseData: CreateJoinRequestDto = {
+    type: backendType as any,
+    name: formData.name,
+    email: formData.email,
+  };
+
+  switch (backendType) {
+    case 'offsetter':
+      return {
+        ...baseData,
+        offsetter: {
+          numberOfTrees: parseInt(formData.trees || '0'),
+          location: formData.location || '',
+        },
+      };
+    case 'land_provider':
+      return {
+        ...baseData,
+        landProvider: {
+          landLocation: formData.landLocation || '',
+          landSize: formData.landSize || '',
+          preferredTrees: formData.preferredTrees || '',
+          notes: formData.notes || '',
+        },
+      };
+    case 'volunteer':
+      return {
+        ...baseData,
+        volunteer: {
+          volunteerLocation: formData.volunteerLocation || '',
+          availableDates: formData.availableDates || '',
+        },
+      };
+    case 'contributor':
+      return {
+        ...baseData,
+        contributor: {
+          skills: formData.skills || '',
+          howToHelp: formData.howToHelp || '',
+        },
+      };
+    default:
+      return baseData;
+  }
+};
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
   if (!isOpen) return null;
@@ -45,7 +178,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
 
 const JoinPage = () => {
   const [activeModal, setActiveModal] = useState<string | null>(null);
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState<JoinFormData>({
     name: '',
     email: '',
     trees: '',
@@ -59,44 +192,108 @@ const JoinPage = () => {
     skills: '',
     howToHelp: '',
   });
+  const [formErrors, setFormErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [apiError, setApiError] = useState<string | null>(null);
 
   const handleInputChange = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
+
+    // Clear error when user starts typing
+    if (formErrors[field]) {
+      setFormErrors((prev) => ({ ...prev, [field]: '' }));
+    }
+
+    // Clear API error when user starts typing
+    if (apiError) {
+      setApiError(null);
+    }
   };
 
-  const handleSubmit = async (type: string) => {
+  const handleSubmit = async (block: JoinFormBlock) => {
+    // Validate form before submission
+    const errors = validateForm(formData, block.fields);
+
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+      return;
+    }
+
     setIsSubmitting(true);
+    setApiError(null);
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      // Transform form data to API format
+      const apiData = transformFormDataToAPI(formData, block.backendType);
 
-    setIsSubmitting(false);
-    setShowSuccess(true);
-    setActiveModal(null);
+      // Submit to API
+      const response = await axios.post<ApiResponse<JoinRequest>>(
+        `${API_BASE_URL}/join`,
+        apiData,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          timeout: 10000, // 10 second timeout
+        }
+      );
 
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setShowSuccess(false);
-      setFormData({
-        name: '',
-        email: '',
-        trees: '',
-        location: '',
-        landLocation: '',
-        landSize: '',
-        preferredTrees: '',
-        notes: '',
-        volunteerLocation: '',
-        availableDates: '',
-        skills: '',
-        howToHelp: '',
-      });
-    }, 3000);
+      if (response.data.success) {
+        setIsSubmitting(false);
+        setShowSuccess(true);
+        setActiveModal(null);
+        setFormErrors({});
+        setApiError(null);
+
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          setShowSuccess(false);
+          setFormData({
+            name: '',
+            email: '',
+            trees: '',
+            location: '',
+            landLocation: '',
+            landSize: '',
+            preferredTrees: '',
+            notes: '',
+            volunteerLocation: '',
+            availableDates: '',
+            skills: '',
+            howToHelp: '',
+          });
+        }, 3000);
+      } else {
+        throw new Error(response.data.message || 'Submission failed');
+      }
+    } catch (error: any) {
+      setIsSubmitting(false);
+
+      if (error.response) {
+        // Server responded with error status
+        const errorMessage =
+          error.response.data?.message ||
+          error.response.data?.error ||
+          `Server error: ${error.response.status}`;
+        setApiError(errorMessage);
+      } else if (error.request) {
+        // Request was made but no response received
+        setApiError(
+          'Network error: Unable to connect to server. Please check your internet connection and try again.'
+        );
+      } else {
+        // Something else happened
+        setApiError(
+          error.message || 'An unexpected error occurred. Please try again.'
+        );
+      }
+
+      console.error('Submission error:', error);
+    }
   };
 
-  const joinBlocks = [
+  const joinBlocks: JoinFormBlock[] = [
     {
       id: 'plant-trees',
       title: 'Offset Your Carbon Footprint by Planting Trees',
@@ -105,6 +302,7 @@ const JoinPage = () => {
       buttonText: 'Plant Trees',
       icon: FaTree,
       modalTitle: 'Plant Trees',
+      backendType: 'offsetter',
       fields: [
         { name: 'name', label: 'Name', type: 'text', required: true },
         { name: 'email', label: 'Email', type: 'email', required: true },
@@ -130,6 +328,7 @@ const JoinPage = () => {
       buttonText: 'Enlist Your Land',
       icon: FaMapMarkedAlt,
       modalTitle: 'Enlist Your Land',
+      backendType: 'land_provider',
       fields: [
         { name: 'name', label: 'Name', type: 'text', required: true },
         { name: 'email', label: 'Email', type: 'email', required: true },
@@ -167,6 +366,7 @@ const JoinPage = () => {
       buttonText: 'Join Volunteer',
       icon: FaHandsHelping,
       modalTitle: 'Join as Volunteer',
+      backendType: 'volunteer',
       fields: [
         { name: 'name', label: 'Name', type: 'text', required: true },
         { name: 'email', label: 'Email', type: 'email', required: true },
@@ -192,6 +392,7 @@ const JoinPage = () => {
       buttonText: 'Join as Contributor',
       icon: FaHeart,
       modalTitle: 'Join as Contributor',
+      backendType: 'contributor',
       fields: [
         { name: 'name', label: 'Name', type: 'text', required: true },
         { name: 'email', label: 'Email', type: 'email', required: true },
@@ -302,15 +503,29 @@ const JoinPage = () => {
         <Modal
           key={block.id}
           isOpen={activeModal === block.id}
-          onClose={() => setActiveModal(null)}
+          onClose={() => {
+            setActiveModal(null);
+            setFormErrors({});
+            setApiError(null);
+          }}
           title={block.modalTitle}
         >
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              handleSubmit(block.id);
+              handleSubmit(block);
             }}
           >
+            {/* API Error Display */}
+            {apiError && (
+              <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-md">
+                <div className="flex items-center text-red-800 text-sm">
+                  <FaExclamationTriangle className="mr-2" size={14} />
+                  {apiError}
+                </div>
+              </div>
+            )}
+
             <div className="space-y-4">
               {block.fields.map((field) => (
                 <div key={field.name}>
@@ -322,26 +537,42 @@ const JoinPage = () => {
                   </label>
                   {field.type === 'textarea' ? (
                     <textarea
-                      value={formData[field.name] || ''}
+                      value={formData[field.name as keyof JoinFormData] || ''}
                       onChange={(e) =>
                         handleInputChange(field.name, e.target.value)
                       }
                       required={field.required}
                       rows={3}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900 placeholder-gray-500"
+                      className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900 placeholder-gray-500 ${
+                        formErrors[field.name]
+                          ? 'border-red-500 focus:ring-red-500'
+                          : 'border-gray-300'
+                      }`}
                       placeholder={`Enter your ${field.label.toLowerCase()}`}
                     />
                   ) : (
                     <input
                       type={field.type}
-                      value={formData[field.name] || ''}
+                      value={formData[field.name as keyof JoinFormData] || ''}
                       onChange={(e) =>
                         handleInputChange(field.name, e.target.value)
                       }
                       required={field.required}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900 placeholder-gray-500"
+                      className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900 placeholder-gray-500 ${
+                        formErrors[field.name]
+                          ? 'border-red-500 focus:ring-red-500'
+                          : 'border-gray-300'
+                      }`}
                       placeholder={`Enter your ${field.label.toLowerCase()}`}
                     />
+                  )}
+
+                  {/* Error Message */}
+                  {formErrors[field.name] && (
+                    <div className="flex items-center mt-1 text-red-600 text-sm">
+                      <FaExclamationTriangle className="mr-1" size={12} />
+                      {formErrors[field.name]}
+                    </div>
                   )}
                 </div>
               ))}
@@ -350,7 +581,11 @@ const JoinPage = () => {
             <div className="flex gap-3 mt-6">
               <button
                 type="button"
-                onClick={() => setActiveModal(null)}
+                onClick={() => {
+                  setActiveModal(null);
+                  setFormErrors({});
+                  setApiError(null);
+                }}
                 className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors"
               >
                 Cancel
