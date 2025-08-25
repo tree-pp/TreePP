@@ -175,7 +175,7 @@ export default function Bottomfooter() {
           </div>
         </div>
       </div> */}
-				<div className='flex md:flex-col pb-0 flex-row md:justify-start'>
+				<div className='flex md:flex-col pb-0 flex-row justify-center'>
 					{/* <div className="flex-shrink-0">
           <Image
             src="/footer_1.png"
@@ -187,7 +187,7 @@ export default function Bottomfooter() {
           />
         </div> */}
 					<div className=' items-center justify-center text-md text-slate-400 font-light text-center'>
-						<div className='px-4 md:pt-8 md:pb-10 pt-5 pb-5 inline-flex'>
+						<div className='px-4 md:pt-8 md:pb-10 pt-5 pb-5 inline-flex justify-center items-center'>
 							<FaRegCopyright
 								className='pr-1.5 mb-2 mx-auto md:mx-0 md:mr-2 pt-1'
 								size='1.2rem'
